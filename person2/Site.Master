@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="person2.SiteMaster" %>
 
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
 <!DOCTYPE html>
 
 <html lang="zh">
@@ -35,6 +37,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+        .auto-style1 {
+            left: 748px;
+            top: 10px;
+            width: 327px;
+            height: 35px;
+            margin-bottom: 1px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -70,106 +81,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Portfolio Item</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+                <a class="navbar-brand page-scroll" href="Default.aspx">OTT</a>
+                <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID, OTTMenuTB.MnuID
+FROM              OTTMenuTB INNER JOIN
+                   MenuMapTB ON OTTMenuTB.MnuID = MenuMapTB.mnuID
+WHERE pRoleType = @pRoleType and isSuper = @isSuper order by ItemOrder">
+                    <SelectParameters>
+                        <asp:SessionParameter DefaultValue="1" Name="pRoleType" SessionField="PRoleType" />
+                        <asp:SessionParameter DefaultValue="1" Name="isSuper" SessionField="isSuper" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="MnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" Font-Size="Medium" >
                 
-                <li class="active">
-							<a class="page-scroll" href="Default.aspx">首頁</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="registration.aspx">註冊會員</a>
-						</li>
-						
-						<li>
-							<a class="page-scroll" href="#portfolio">熱門影片</a>
-						</li>
-						
-						<li>
-							<a class="page-scroll" href="login.aspx">登入</a>
-						</li>
-              </ul>
-        </div>
-            <!-- /.navbar-collapse -->
+
+
+                </telerik:RadMenu> 
+            </div>
+         
         </div>
         <!-- /.container -->
     </nav>
     <!-- Slider -->
-    <div id="home">
-        <section class="carousel carousel-fade slide home-slider" id="c-slide" data-ride="carousel"
-            data-interval="4500" data-pause="false">
-	<ol class="carousel-indicators">
-		<li data-target="#c-slide" data-slide-to="0" class="active"></li>
-		<li data-target="#c-slide" data-slide-to="1" class=""></li>		
-	</ol>
-	<div class="carousel-inner">
-		<div class="item active bg1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 fadein scaleInv anim_1">
-                    <br />
-						<div class="fadein scaleInv anim_2">
-							<h1 class="carouselText1 animated fadeInLeftBig">Responsive  <span class="colortext">Webdesign Templates -  Bootstrap Template, HTML5 & Css3</span></h1>
-						</div>
-						<div class="fadein scaleInv anim_1">
-							<p class="carouselText2 animated fadeInLeftBig">
-								Exlent Support Video, Audio
-							</p>
-						</div>							
-						
-					</div>
-					<div class="col-md-6 text-center fadein scaleInv anim_2">
-						<div class="text-center">
-							<div class="fadein scaleInv anim_3">
-								<img src="img/slide1-3.png" alt="" class="slide1-3 animated fadeInRightBig">
-							</div>
-							<div class="fadein scaleInv anim_8">
-								<img src="img/slide1-1.png" alt="" class="slide1-1 animated fadeInRightBig">
-							</div>
-							<div class="fadein scaleInv anim_5">
-								<img src="img/slide1-2.png" alt="" class="slide1-2 animated fadeInRightBig">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="item bg2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 animated fadeInUp notransition">
-                    <br />
-						<img src="img/slide1-1.png" alt="" style="width:90%;">
-					</div>
-					<div class="col-md-6 animated fadeInDown  notransition topspace30 text-right">
-						
-						<br>
-						<br>
-						<br>
-						<div class="car-highlight3 animated fadeInUpBig notransition">
-							 Bootstrap is completely free to download and use!
-						</div>
-						<br>
-						<div class="car-highlight4 animated flipInX notransition">
-							Bootstrap Text/Typography, Bootstrap Tables
-						</div>
-						<br>
-						<div class="car-highlight5 animated rollIn notransition">
-							 Bootstrap Button Groups Total Control
-							ootstrap allows you to group a series of buttons<br /> together (on a single line) in a button group
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
+   
 	<!-- /.carousel-inner -->
-	<a class="left carousel-control animated fadeInLeft" href="#c-slide" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
-	<a class="right carousel-control animated fadeInRight" href="#c-slide" data-slide="next"><i class="fa fa-arrow-right"></i></a>
-	</section>
+	
         <!-- /.carousel end-->
     </div>
         <div class="container body-content">

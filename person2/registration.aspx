@@ -3,10 +3,6 @@
     <asp:Content ID="ContentHeader" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 
         <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-            height: 888px;
-        }
         .auto-style2 {
             width: 243px;
             text-align: center;
@@ -45,28 +41,79 @@
             height: 74px;
         }
         .auto-style13 {
-            width: 29px;
-        }
+        width: 375px;
+    }
         .auto-style14 {
             height: 74px;
-            width: 29px;
+            width: 375px;
         }
             .auto-style15 {
                 font-size: x-large;
             }
+    .auto-style16 {
+        width: 4px;
+    }
+    .auto-style17 {
+        height: 74px;
+        width: 4px;
+    }
+    .auto-style18 {
+        width: 266px;
+        text-align: center;
+        background-color: #FFFFFF;
+        padding: 16px 4px 16px 4px;
+        height: 52px;
+    }
+    .auto-style19 {
+        width: 243px;
+        text-align: center;
+        background-color: #CCCCCC;
+        padding: 16px 4px 16px 4px;
+        height: 52px;
+    }
+    .auto-style20 {
+        width: 4px;
+        height: 52px;
+    }
+    .auto-style21 {
+        width: 375px;
+        height: 52px;
+    }
+    .auto-style22 {
+        height: 52px;
+    }
+    .auto-style23 {
+        width: 969px;
+        height: 35px;
+        left: 748px;
+        top: 10px;
+        margin-bottom: 1px;
+    }
     </style>
 
     </asp:Content>
     <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div>
-            <table class="auto-style1">
+            <table class="auto-style23">
+                <tr>
+                    <td class="auto-style18">
+                        </td>
+                    <td class="auto-style19">
+                    </td>
+                    <td class="auto-style20">
+                        </td>
+                    <td class="auto-style21">
+                        </td>
+                    <td class="auto-style22">
+                    </td>
+                </tr>
                 <tr>
                     <td class="auto-style8">
                         &nbsp;</td>
                     <td class="auto-style2">
                         <asp:Label ID="Label1" runat="server" Text="姓名" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -80,7 +127,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label2" runat="server" Text="學生/教職員 編號" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -94,7 +141,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label3" runat="server" Text="角色" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -110,12 +157,12 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label4" runat="server" Text="e-mail" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
                     <td>
-                        <asp:TextBox ID="txtEmail" runat="server" Width="364px" Font-Size="X-Large"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" Width="376px" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -124,7 +171,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label5" runat="server" Text="帳號" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -138,7 +185,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label6" runat="server" Text="密碼" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -152,7 +199,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label7" runat="server" Text="性別" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -169,7 +216,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label8" runat="server" Text="國家" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -185,7 +232,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label9" runat="server" Text="生日" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -305,7 +352,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label10" runat="server" Text="教育程度" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -321,7 +368,7 @@
                     <td class="auto-style2">
                         <asp:Label ID="Label11" runat="server" Text="縣市" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
@@ -337,7 +384,7 @@
                     <td class="auto-style11">
                         <asp:Label ID="Label12" runat="server" Text="職業" CssClass="auto-style7" Font-Size="X-Large"></asp:Label>
                     </td>
-                    <td class="auto-style12">
+                    <td class="auto-style17">
                         &nbsp;</td>
                     <td class="auto-style14">
                         &nbsp;</td>

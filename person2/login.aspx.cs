@@ -97,5 +97,12 @@ namespace person2
                 this.lblshow.Text = "資料連線錯誤";
             }
         }
+
+     
+
+        protected void btnRegistration_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("registration.aspx");
+        } 
     }
 }
