@@ -35,6 +35,7 @@ namespace person2
             string strRoletype = ddlroletype.SelectedValue;
             int roletype = 1;     // 預設角色為學生
             int.TryParse(strRoletype, out roletype);
+
             DateTime createdtime = DateTime.Now;
             string email = txtEmail.Text;
             string username = txtUsername.Text;
@@ -57,7 +58,7 @@ namespace person2
             DateTime birthday = DateTime.Parse(year + "/" + month + "/" + day);
 
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
-            {
+            {  
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Insert Into Person (PName, PCode, PRoleType, PCreatedOn,PEmail,PUserName,PPassword,PSex,PCountry,PBirthDate,PEducation,PRegion,PCareer,PSuper) VALUES (@PName, @PCode,@PRoleType,@PCreatedOn,@PEmail,@PUserName,@PPassword,@PSex,@PCountry,@PBirthDate,@PEducation,@PRegion,@PCareer, 1)";
                 cmd.Connection = conn;
@@ -79,7 +80,7 @@ namespace person2
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
                 {
-                    Response.Write("ok");
+                    Response.Redirect("Default.aspx");
                 }
 
 

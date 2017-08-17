@@ -22,11 +22,17 @@ namespace person2
             string UserName = txtUsername.Text;
             string Password = txtPassword.Text;
             int pId = 0;
+            int pSuper = 1;
             int pRoleType = 0;
             string pName = "";
             string pCode = "";
-            int pSuper = 1;
-
+            string pEmail = "";
+            string pPassword = "";
+            string pCountry = "";
+            //string pYear = "";
+            //string pMonth = "";
+            //string pDay = "";
+            //DateTime pBirth = DateTime.Parse(pYear + "/" + pMonth + "/" + pDay);
             try
             {
                 using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
@@ -43,29 +49,47 @@ namespace person2
                         if (rd.Read())
                         {
                             pId = (int)rd["PID"];
+
                             string strPRoleType = rd["PRoleType"].ToString();
                             if (int.TryParse(strPRoleType, out pRoleType) == false)
                             {
                                 this.lblshow.Text = "登入成功，但資料有錯誤! pRoleType的值為" + strPRoleType;
                                 return;
                             }
+
                             string strPSuper = rd["PSuper"].ToString();
                             if (int.TryParse(strPSuper, out pSuper) == false)
                             {
                                 this.lblshow.Text = "登入成功，但資料有錯誤! pSuper的值為" + strPSuper;
                                 return;
                             }
-                            pName = rd["PName"].ToString();
                             pCode = rd["PCode"].ToString();
+                            pName = rd["PName"].ToString();
+                            pEmail = rd["PEmail"].ToString();
+                            pPassword = rd["PPassword"].ToString();
+                            pCountry = rd["PCountry"].ToString();
+                            string strPBirthDate = rd["PBirthDate"].ToString();
+                            DateTime birthday = DateTime.Parse(strPBirthDate);
+
+                            //if(DateTime.TryParse(strPBirthDate,out pBirth = ))
+                               // {
+
+                           // }
+                            
 
                             this.lblshow.Text = "登入成功";
+
                             Session["PID"] = pId;
                             Session["PRoleType"] = pRoleType;
                             Session["PSuper"] = pSuper;
                             Session["PCode"] = pCode;
                             Session["PName"] = pName;
-                            Server.TransferRequest("MemberInformationChange.aspx");
-                            //Response.Redirect("Mediaplayer.aspx");
+                            Session["PEmail"] = pEmail;
+                            Session["PPassword"] = pPassword;
+                            Session["PCountry"] = pCountry;
+                            Session["PBirthDate"] = birthday;
+                           // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
+                           Response.Redirect("MemberInformationChange.aspx");   //可以session
 
                             //if (Session["PID"] == null)
                             //{

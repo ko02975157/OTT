@@ -20,38 +20,13 @@
             padding: 16px 4px 16px 4px;
         }
      
-        .auto-style10 {
-            width: 266px;
-            text-align: center;
-            background-color: #FFFFFF;
-            padding: 16px 4px 16px 4px;
-            height: 74px;
-        }
-        .auto-style11 {
-            width: 243px;
-            text-align: center;
-            background-color: #CCCCCC;
-            padding: 16px 4px 16px 4px;
-            height: 74px;
-        }
-        .auto-style12 {
-            height: 74px;
-        }
         .auto-style13 {
         width: 375px;
     }
-        .auto-style14 {
-            height: 74px;
-            width: 375px;
-        }
             .auto-style15 {
                 font-size: x-large;
             }
     .auto-style16 {
-        width: 4px;
-    }
-    .auto-style17 {
-        height: 74px;
         width: 4px;
     }
     .auto-style18 {
@@ -113,8 +88,7 @@
                     <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
-                        <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td>
                         <asp:TextBox ID="txtName" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
@@ -167,20 +141,6 @@
                     <td class="auto-style8">
                         &nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Label ID="Label5" runat="server" Text="帳號" CssClass="auto-style7"></asp:Label>
-                    </td>
-                    <td class="auto-style16">
-                        &nbsp;</td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
-                    <td>
-                        <asp:TextBox ID="txtUsername" runat="server" Font-Size="X-Large"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
                         <asp:Label ID="Label6" runat="server" Text="密碼" CssClass="auto-style7"></asp:Label>
                     </td>
                     <td class="auto-style16">
@@ -188,24 +148,7 @@
                     <td class="auto-style13">
                         &nbsp;</td>
                     <td>
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Font-Size="X-Large"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label7" runat="server" Text="性別" CssClass="auto-style7"></asp:Label>
-                    </td>
-                    <td class="auto-style16">
-                        &nbsp;</td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
-                    <td>
-                        <asp:RadioButtonList ID="rblSex" runat="server" Height="16px" Width="162px" Font-Size="X-Large" RepeatDirection="Horizontal">
-                            <asp:ListItem Value="1">男</asp:ListItem>
-                            <asp:ListItem Value="2">女</asp:ListItem>
-                        </asp:RadioButtonList>
+                        <asp:TextBox ID="txtPassword" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -344,55 +287,7 @@
                         </asp:DropDownList>
                         日</span></td>
                 </tr>
-                <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label10" runat="server" Text="教育程度" CssClass="auto-style7"></asp:Label>
-                    </td>
-                    <td class="auto-style16">
-                        &nbsp;</td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
-                    <td>
-                        <asp:DropDownList ID="ddlEducation" runat="server" DataSourceID="SqlDataSourceEducation" DataTextField="edu" DataValueField="edu" Font-Size="X-Large" Height="36px" Width="167px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourceEducation" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [edu] FROM [Education]"></asp:SqlDataSource>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label11" runat="server" Text="縣市" CssClass="auto-style7"></asp:Label>
-                    </td>
-                    <td class="auto-style16">
-                        &nbsp;</td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
-                    <td>
-                        <asp:DropDownList ID="ddlRegion" runat="server" DataSourceID="SqlDataSourceRegion" DataTextField="rei" DataValueField="rei" Font-Size="X-Large" Height="28px" Width="165px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourceRegion" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [rei] FROM [Reig]"></asp:SqlDataSource>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style10">
-                    </td>
-                    <td class="auto-style11">
-                        <asp:Label ID="Label12" runat="server" Text="職業" CssClass="auto-style7" Font-Size="X-Large"></asp:Label>
-                    </td>
-                    <td class="auto-style17">
-                        &nbsp;</td>
-                    <td class="auto-style14">
-                        &nbsp;</td>
-                    <td class="auto-style12">
-                        <asp:DropDownList ID="ddlCareer" runat="server" DataSourceID="SqlDataSourceCareer" DataTextField="careername" DataValueField="career" Font-Size="X-Large" Height="28px" Width="165px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourceCareer" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [career], [careername] FROM [Career]"></asp:SqlDataSource>
-                    </td>
-                </tr>
-            </table>
+                </table>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />

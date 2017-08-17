@@ -36,8 +36,9 @@
             height: 74px;
         }
         .auto-style12 {
-            height: 74px;
-        }
+                height: 74px;
+                width: 385px;
+            }
         .auto-style13 {
         width: 375px;
     }
@@ -79,14 +80,18 @@
     }
     .auto-style22 {
         height: 52px;
-    }
+                width: 385px;
+            }
     .auto-style23 {
-        width: 969px;
+        width: 1011px;
         height: 35px;
         left: 748px;
         top: 10px;
         margin-bottom: 1px;
     }
+            .auto-style24 {
+                width: 385px;
+            }
     </style>
 
     </asp:Content>
@@ -115,7 +120,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:TextBox ID="txtName" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
@@ -129,21 +134,21 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:TextBox ID="txtCode" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style2">
+                    <td class="auto-style10">
+                        </td>
+                    <td class="auto-style11">
                         <asp:Label ID="Label3" runat="server" Text="角色" CssClass="auto-style7"></asp:Label>
                     </td>
-                    <td class="auto-style16">
-                        &nbsp;</td>
-                    <td class="auto-style13">
-                        &nbsp;</td>
-                    <td>
+                    <td class="auto-style17">
+                        </td>
+                    <td class="auto-style14">
+                        </td>
+                    <td class="auto-style12">
                         <asp:DropDownList ID="ddlroletype" runat="server" DataSourceID="SqlDataSourceRoleType" DataTextField="roletypeDescription" DataValueField="roletype" Font-Size="X-Large">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSourceRoleType" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [roletype], [roletypeDescription] FROM [RoleType]" ></asp:SqlDataSource>
@@ -159,8 +164,8 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
-                        <asp:TextBox ID="txtEmail" runat="server" Width="376px" Font-Size="X-Large"></asp:TextBox>
+                    <td class="auto-style24">
+                        <asp:TextBox ID="txtEmail" runat="server" Width="369px" Font-Size="X-Large" TextMode="Email"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -173,7 +178,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:TextBox ID="txtUsername" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
@@ -187,7 +192,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Font-Size="X-Large"></asp:TextBox>
                     </td>
                 </tr>
@@ -201,7 +206,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:RadioButtonList ID="rblSex" runat="server" Height="16px" Width="162px" Font-Size="X-Large" RepeatDirection="Horizontal">
                             <asp:ListItem Value="1">男</asp:ListItem>
                             <asp:ListItem Value="2">女</asp:ListItem>
@@ -218,7 +223,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:DropDownList ID="ddlCountry" runat="server" DataSourceID="SqlDataSourceCountry" DataTextField="countryname" DataValueField="country" Font-Size="X-Large" Height="36px" Width="167px">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSourceCountry" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [country], [countryname] FROM [Country]"></asp:SqlDataSource>
@@ -234,7 +239,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:DropDownList ID="ddlYear" runat="server" Height="36px" Width="114px" Font-Size="Large">
                             <asp:ListItem>1950</asp:ListItem>
                             <asp:ListItem>1951</asp:ListItem>
@@ -354,7 +359,7 @@
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:DropDownList ID="ddlEducation" runat="server" DataSourceID="SqlDataSourceEducation" DataTextField="edu" DataValueField="edu" Font-Size="X-Large" Height="36px" Width="167px">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSourceEducation" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [edu] FROM [Education]"></asp:SqlDataSource>
@@ -364,13 +369,13 @@
                     <td class="auto-style8">
                         &nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Label ID="Label11" runat="server" Text="縣市" CssClass="auto-style7"></asp:Label>
+                        <asp:Label ID="Label11" runat="server" Text="居住縣市" CssClass="auto-style7"></asp:Label>
                     </td>
                     <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
                         &nbsp;</td>
-                    <td>
+                    <td class="auto-style24">
                         <asp:DropDownList ID="ddlRegion" runat="server" DataSourceID="SqlDataSourceRegion" DataTextField="rei" DataValueField="rei" Font-Size="X-Large" Height="28px" Width="165px">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSourceRegion" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [rei] FROM [Reig]"></asp:SqlDataSource>
