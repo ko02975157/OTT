@@ -22,6 +22,7 @@ namespace person2
             RadMediaPlayer1.StartTime = 0;
             RadMediaPlayer1.Muted = false;
             RadMediaPlayer1.AutoPlay = false;
+        
 
             foreach (MediaPlayerSource source in file.Sources)
             {
