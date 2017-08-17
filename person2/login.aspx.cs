@@ -21,7 +21,7 @@ namespace person2
         {
             string UserName = txtUsername.Text;
             string Password = txtPassword.Text;
-            int pid = 0;
+            int pId = 0;
             int pRoleType = 0;
             string pName = "";
             string pCode = "";
@@ -37,17 +37,12 @@ namespace person2
                     SqlCommand cmd = new SqlCommand(sqlStatement, conn);
                     cmd.Parameters.AddWithValue("@user", UserName);
                     cmd.Parameters.AddWithValue("@password", Password);
-                    //SqlParameter tParam1 = new SqlParameter("@user", SqlDbType.NVarChar);
-                    //tParam1.Value = UserName;
-                    //cmd.Parameters.Add(tParam1);
-                    //SqlParameter tParam2 = new SqlParameter("@password", SqlDbType.VarChar);
-                    //tParam2.Value = Password;
-                    //cmd.Parameters.Add(tParam2);
+                    
                     using (SqlDataReader rd = cmd.ExecuteReader())
                     {
                         if (rd.Read())
                         {
-                            pid = (int)rd["PID"];
+                            pId = (int)rd["PID"];
                             string strPRoleType = rd["PRoleType"].ToString();
                             if (int.TryParse(strPRoleType, out pRoleType) == false)
                             {
@@ -64,12 +59,12 @@ namespace person2
                             pCode = rd["PCode"].ToString();
 
                             this.lblshow.Text = "登入成功";
-                            Session["PID"] = pid;
+                            Session["PID"] = pId;
                             Session["PRoleType"] = pRoleType;
                             Session["PSuper"] = pSuper;
                             Session["PCode"] = pCode;
                             Session["PName"] = pName;
-                            //Server.TransferRequest("~/Mediaplayer.aspx");
+                            Server.TransferRequest("MemberInformationChange.aspx");
                             //Response.Redirect("Mediaplayer.aspx");
 
                             //if (Session["PID"] == null)
@@ -78,7 +73,7 @@ namespace person2
                             //}
                             //else
                             //{
-                            //    int ppid = (int)Session["PID"];
+                            //    int pId = (int)Session["PID"];
                             //}
                         }
                         else

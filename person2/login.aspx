@@ -3,37 +3,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <style type="text/css">
     .auto-style8 {
-        height: 46px;
-    }
-    .auto-style9 {
-        height: 58px;
-        width: 231px;
-        text-align: center;
-    }
+            height: 46px;
+            width: 460px;
+        }
     .auto-style10 {
         height: 58px;
-    }
-    .auto-style11 {
-        height: 46px;
-        width: 231px;
-        text-align: center;
-    }
-    .auto-style12 {
-        width: 1030px;
-        height: 415px;
-        left: 0px;
-        top: 0px;
-        margin-bottom: 1px;
-    }
-        .auto-style13 {
-            height: 46px;
-            width: 108px;
-            text-align: center;
+            width: 460px;
         }
-        .auto-style14 {
-            height: 58px;
-            width: 108px;
-            text-align: center;
+        .auto-style11 {
+            width: 469px;
+        }
+        .auto-style12 {
+            width: 677px;
+            height: 316px;
         }
     </style>
 </asp:Content>

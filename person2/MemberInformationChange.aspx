@@ -1,6 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="person2.registration" %>
-
-    <asp:Content ID="ContentHeader" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MemberInformationChange.aspx.cs" Inherits="person2.MemberInformationChange" %>
+<asp:Content ID="ContentHeader" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
 
         <style type="text/css">
         .auto-style2 {
@@ -20,7 +19,7 @@
             background-color: #FFFFFF;
             padding: 16px 4px 16px 4px;
         }
-        
+     
         .auto-style10 {
             width: 266px;
             text-align: center;
@@ -114,7 +113,8 @@
                     <td class="auto-style16">
                         &nbsp;</td>
                     <td class="auto-style13">
-                        &nbsp;</td>
+                        <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
+                    </td>
                     <td>
                         <asp:TextBox ID="txtName" runat="server" Font-Size="X-Large"></asp:TextBox>
                     </td>
@@ -401,5 +401,5 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnRegistration" runat="server" OnClick="btnRegistration_Click" Text="註冊" Width="190px" CssClass="auto-style9" Font-Size="X-Large" Height="49px" />
+        <asp:Button ID="btnInfChange" runat="server" OnClick="btnInfChange_Click" Text="修改" Width="190px" CssClass="auto-style9" Font-Size="X-Large" Height="49px" />
    </asp:Content>
