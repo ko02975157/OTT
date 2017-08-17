@@ -18,6 +18,7 @@ namespace person2
         }
         private void ConfigureMediaPlayer(MediaPlayerFile file)
         {
+
             RadMediaPlayer1.Sources.Clear();
             RadMediaPlayer1.StartTime = 0;
             RadMediaPlayer1.Muted = false;
