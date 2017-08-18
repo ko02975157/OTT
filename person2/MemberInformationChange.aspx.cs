@@ -15,19 +15,21 @@ namespace person2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["PName"] != null)
+            if (Session["PID"] != null)
             {
-                txtName.Text = Session["PName"].ToString();
-                txtCode.Text = Session["PCode"].ToString();
-                ddlroletype.Text = Session["PRoleType"].ToString();
-                txtEmail.Text = Session["PEmail"].ToString();
-                txtPassword.Text = Session["PPassword"].ToString();
-                ddlCountry.Text = Session["PCountry"].ToString();
-                DateTime birthday = (DateTime)Session["PBirthDate"];
-                ddlYear.Text = birthday.Year.ToString();
-                ddlMonth.Text = birthday.Month.ToString();
-                ddlDay.Text = birthday.Day.ToString();
-
+                if (this.IsPostBack == false)
+                {
+                    txtName.Text = Session["PName"].ToString();
+                    txtCode.Text = Session["PCode"].ToString();
+                    ddlroletype.Text = Session["PRoleType"].ToString();
+                    txtEmail.Text = Session["PEmail"].ToString();
+                    txtPassword.Text = Session["PPassword"].ToString();
+                    ddlCountry.SelectedValue = Session["PCountry"].ToString();
+                    DateTime birthday = (DateTime)Session["PBirthDate"];
+                    ddlYear.SelectedValue = birthday.Year.ToString();
+                    ddlMonth.SelectedValue = birthday.Month.ToString();
+                    ddlDay.SelectedValue = birthday.Day.ToString();
+                }
             }
             else
             {
