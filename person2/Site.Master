@@ -27,6 +27,9 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+    <asp:ContentPlaceHolder
+        ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
 
 </head>
 <body class="homepage">

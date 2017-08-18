@@ -7,8 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace person2
 {
-	public partial class MediaContent : System.Web.UI.Page
+	public partial class PersonRecord : System.Web.UI.Page
 	{
-	
+		protected void Page_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
