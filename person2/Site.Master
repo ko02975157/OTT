@@ -1,53 +1,35 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="person2.SiteMaster" %>
-
-<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NetTVMobileWebSite.SiteMaster" %>
 
 <!DOCTYPE html>
 
 <html lang="zh">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1.0" />--%>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title><%: Page.Title %> - 我的 ASP.NET  應用程式</title>
-
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-panels.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel-noscript.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</noscript>
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
-    </asp:ContentPlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- Custom CSS -->
-    <link href="css/portfolio-item.css" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/animated.css" rel="stylesheet" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700'
-        rel='stylesheet' type='text/css' />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-        .auto-style1 {
-            left: 748px;
-            top: 10px;
-            width: 327px;
-            height: 35px;
-            margin-bottom: 1px;
-        }
-    </style>
 </head>
-<body>
+<body class="homepage">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -70,94 +52,43 @@
             </Scripts>
         </asp:ScriptManager>
 
-            <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="Default.aspx">OTT</a>
-                <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID, OTTMenuTB.MnuID
-FROM              OTTMenuTB INNER JOIN
-                   MenuMapTB ON OTTMenuTB.MnuID = MenuMapTB.mnuID
-WHERE pRoleType = @pRoleType and isSuper = @isSuper order by ItemOrder">
-                    <SelectParameters>
-                        <asp:SessionParameter DefaultValue="1" Name="pRoleType" SessionField="PRoleType" />
-                        <asp:SessionParameter DefaultValue="1" Name="isSuper" SessionField="isSuper" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
-                <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="MnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" Font-Size="Medium" >
-                
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Monochromed</a></h1>
+						<span>Design by TEMPLATED</span>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="active"><a href="index.html">Homepage</a></li>
+							<li><a href="threecolumn.html">Two Sidebars</a></li>
+							<li><a href="twocolumn1.html">Left Sidebar</a></li>
+							<li><a href="twocolumn2.html">Right Sidebar</a></li>
+							<li><a href="onecolumn.html">No Sidebar</a></li>
+						</ul>
+					</nav>
 
-
-                </telerik:RadMenu> 
-            </div>
-         
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- Slider -->
-   
-	<!-- /.carousel-inner -->
-	
-        <!-- /.carousel end-->
-    </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <p class="pull-left">
-                        &copy; Copyright 2017 aspxtemplates.com
-                    </p>
-                </div>
-                <div class="col-md-8">
-                    <ul class="footermenu pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+			</div>
+		</div>
+	    <!-- Header -->
+        <!-- Main -->
+		<div id="main">
+			<div class="container">
+                <div class="container body-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <hr />
+                    <footer>
+                        <p>&copy; <%: DateTime.Now.Year %> - 我的 ASP.NET  應用程式</p>
+                    </footer>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Script -->
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
-    <script src="js/scrolling-nav.js" type="text/javascript"></script>
-    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            var offset = 220;
-            var duration = 500;
-            jQuery(window).scroll(function () {
-                if (jQuery(this).scrollTop() > offset) {
-                    jQuery('.back-to-top').fadeIn(duration);
-                } else {
-                    jQuery('.back-to-top').fadeOut(duration);
-                }
-            });
-
-            jQuery('.back-to-top').click(function (event) {
-                event.preventDefault();
-                jQuery('html, body').animate({ scrollTop: 0 }, duration);
-                return false;
-            })
-        });
-    </script>
-            </footer>
-        </div>
-
     </form>
 </body>
 </html>
