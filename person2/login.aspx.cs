@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-
+using static System.Web.UI.MasterPage;
 namespace person2
 {
     public partial class login : System.Web.UI.Page
