@@ -7,7 +7,7 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace NetTVMobileWebSite {
+namespace person2 {
     
     
     public partial class SiteMaster {
