@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -191,7 +192,7 @@
     <Content Include="js\skel-panels.min.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="login.aspx" />
-    <Content Include="MediaContent.aspx" />
+    <Content Include="Media.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\11.png" />
     <Content Include="img\12.png" />
@@ -204,7 +205,10 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="MediaPlayer.aspx" />
+    <Content Include="MediaUpload.aspx" />
     <Content Include="MemberInformationChange.aspx" />
+    <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -276,12 +280,26 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MediaContent.aspx.cs">
-      <DependentUpon>MediaContent.aspx</DependentUpon>
+    <Compile Include="Media.aspx.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MediaContent.aspx.designer.cs">
-      <DependentUpon>MediaContent.aspx</DependentUpon>
+    <Compile Include="Media.aspx.designer.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaPlayer.aspx.cs">
+      <DependentUpon>MediaPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaPlayer.aspx.designer.cs">
+      <DependentUpon>MediaPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaUpload.aspx.cs">
+      <DependentUpon>MediaUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaUpload.aspx.designer.cs">
+      <DependentUpon>MediaUpload.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberInformationChange.aspx.cs">
       <DependentUpon>MemberInformationChange.aspx</DependentUpon>
@@ -289,6 +307,13 @@
     </Compile>
     <Compile Include="MemberInformationChange.aspx.designer.cs">
       <DependentUpon>MemberInformationChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonRecord.aspx.cs">
+      <DependentUpon>PersonRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonRecord.aspx.designer.cs">
+      <DependentUpon>PersonRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">
