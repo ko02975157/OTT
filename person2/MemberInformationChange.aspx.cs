@@ -6,8 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
-using System.Web.Configuration;
-using System.Data;
+
 
 namespace person2
 {
@@ -38,7 +37,35 @@ namespace person2
         protected void btnInfChange_Click(object sender, EventArgs e)
         {
             string pid = Session["PID"].ToString();
-            // Update TB set (@PRoleType=)where(@PID=pid)
+            string name = Session["PName"].ToString();
+            string code = Session["PCode"].ToString();
+            string roletype = Session["PRoleType"].ToString();
+            string email = Session["PEmail"].ToString();
+            string password = Session["PPassword"].ToString();
+            string country = Session["PCountry"].ToString();
+            DateTime birthday = (DateTime)Session["PBirthDate"];
+            ddlYear.Text = birthday.Year.ToString();
+            ddlMonth.Text = birthday.Month.ToString();
+            ddlDay.Text = birthday.Day.ToString();
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Update Person(@PName=PName,@PCode=PCode,@PRoleType=PRoleType,@PEmail=PEmail,@PPassword=PPassword,@PCountry=PCountry,@PBirthDate=PBirthDate) Where (@PID=PID)";
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@PName", name);
+                cmd.Parameters.AddWithValue("@PCode", code);
+                cmd.Parameters.AddWithValue("@PRoleType", roletype);
+                cmd.Parameters.AddWithValue("@PEmail", email);
+                cmd.Parameters.AddWithValue("@PPassword", password);
+                cmd.Parameters.AddWithValue("@PCountry", country);
+                cmd.Parameters.AddWithValue("@PBirthDate", birthday);
+                conn.Open();
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    Response.Redirect("Default.aspx");
+                }
+            }
         }
     }
 }
