@@ -36,6 +36,13 @@
         .auto-style8 {
             height: 28px;
         }
+        .auto-style9 {
+            width: 379px;
+            height: 24px;
+        }
+        .auto-style10 {
+            height: 24px;
+        }
     </style>
 </head>
 <body>
@@ -65,14 +72,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">上傳者</td>
-                    <td>
+                    <td class="auto-style9">上傳者</td>
+                    <td class="auto-style10">
                         <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">系名稱</td>
-                    <td>
+                    <td class="auto-style9">系名稱</td>
+                    <td class="auto-style10">
                         <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
@@ -83,8 +90,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">檔名</td>
-                    <td>
+                    <td class="auto-style9">檔名</td>
+                    <td class="auto-style10">
                         <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
