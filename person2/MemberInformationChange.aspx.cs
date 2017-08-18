@@ -37,18 +37,6 @@ namespace person2
         }
         protected void btnInfChange_Click(object sender, EventArgs e)
         {
-            string pid = Session["PID"].ToString();
-            string name = Session["PName"].ToString();
-            string code = Session["PCode"].ToString();
-            string roletype = Session["PRoleType"].ToString();
-            string email = Session["PEmail"].ToString();
-            string password = Session["PPassword"].ToString();
-            string country = Session["PCountry"].ToString();
-            DateTime birthday = (DateTime)Session["PBirthDate"];
-            ddlYear.Text = birthday.Year.ToString();
-            ddlMonth.Text = birthday.Month.ToString();
-            ddlDay.Text = birthday.Day.ToString();
-
             string strname = txtName.Text;
             string strcode = txtCode.Text;
             string strRoletype = ddlroletype.SelectedValue;
@@ -64,8 +52,13 @@ namespace person2
 
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
             {
+                if (Session["PID"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                string pid = Session["PID"].ToString();  //判斷登入為何者
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Update Person set (PName=@PName,PCode=@PCode,PRoleType=@PRoleType,PEmail=@PEmail,PPassword=@PPassword,PCountry=@PCountry,PBirthDate=@PBirthDate) Where (PID=@PID)";
+                cmd.CommandText = "Update Person set PName=@PName,PCode=@PCode,PRoleType=@PRoleType,PEmail=@PEmail,PPassword=@PPassword,PCountry=@PCountry,PBirthDate=@PBirthDate Where PID=@PID";
                 cmd.Connection = conn;
                 cmd.Parameters.AddWithValue("@PName", strname);
                 cmd.Parameters.AddWithValue("@PCode", strcode);
@@ -74,11 +67,13 @@ namespace person2
                 cmd.Parameters.AddWithValue("@PPassword", strpassword);
                 cmd.Parameters.AddWithValue("@PCountry", strcountry);
                 cmd.Parameters.AddWithValue("@PBirthDate", strbirthday);
+                cmd.Parameters.AddWithValue("@PID", pid);  //判斷登入者
                 conn.Open();
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
                 {
-                    Response.Redirect("Default.aspx");
+                    Response.Write("修改成功");
+                    //Response.Redirect("Default.aspx");
                 }
             }
         }
