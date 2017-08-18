@@ -5,9 +5,8 @@
 <html lang="zh">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <%--<meta name="viewport" content="width=device-width, initial-scale=1.0" />--%>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%--    <webopt:bundlereference runat="server" path="~/Content/css" />--%>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title><%: Page.Title %> - 我的 ASP.NET  應用程式</title>
 	<meta name="description" content="" />

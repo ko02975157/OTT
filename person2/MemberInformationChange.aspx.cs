@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
+using static System.Web.UI.MasterPage;
 
 
 namespace person2
@@ -47,18 +48,32 @@ namespace person2
             ddlYear.Text = birthday.Year.ToString();
             ddlMonth.Text = birthday.Month.ToString();
             ddlDay.Text = birthday.Day.ToString();
+
+            string strname = txtName.Text;
+            string strcode = txtCode.Text;
+            string strRoletype = ddlroletype.SelectedValue;
+            string stremail = txtEmail.Text;
+            string strpassword = txtPassword.Text;
+            string strcountry = ddlCountry.SelectedValue;
+            string year = ddlYear.SelectedValue;
+            string month = ddlMonth.SelectedValue;
+            string day = ddlDay.SelectedValue;
+
+            DateTime strbirthday = DateTime.Parse(year + "/" + month + "/" + day);
+
+
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Update Person(@PName=PName,@PCode=PCode,@PRoleType=PRoleType,@PEmail=PEmail,@PPassword=PPassword,@PCountry=PCountry,@PBirthDate=PBirthDate) Where (@PID=PID)";
+                cmd.CommandText = "Update Person set (PName=@PName,PCode=@PCode,PRoleType=@PRoleType,PEmail=@PEmail,PPassword=@PPassword,PCountry=@PCountry,PBirthDate=@PBirthDate) Where (PID=@PID)";
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@PName", name);
-                cmd.Parameters.AddWithValue("@PCode", code);
-                cmd.Parameters.AddWithValue("@PRoleType", roletype);
-                cmd.Parameters.AddWithValue("@PEmail", email);
-                cmd.Parameters.AddWithValue("@PPassword", password);
-                cmd.Parameters.AddWithValue("@PCountry", country);
-                cmd.Parameters.AddWithValue("@PBirthDate", birthday);
+                cmd.Parameters.AddWithValue("@PName", strname);
+                cmd.Parameters.AddWithValue("@PCode", strcode);
+                cmd.Parameters.AddWithValue("@PRoleType", strRoletype);
+                cmd.Parameters.AddWithValue("@PEmail", stremail);
+                cmd.Parameters.AddWithValue("@PPassword", strpassword);
+                cmd.Parameters.AddWithValue("@PCountry", strcountry);
+                cmd.Parameters.AddWithValue("@PBirthDate", strbirthday);
                 conn.Open();
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
