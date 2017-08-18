@@ -15,30 +15,31 @@ namespace person2
 
 		}
 
-		protected void RadButton1_Click(object sender, EventArgs e)
-		{
-			MediaPlayerFile file = new MediaPlayerVideoFile();
-			file.Sources.Add(new MediaPlayerSource() { Path = RadTextBox1.Text });
-			ConfigureMediaPlayer(file);
-		}
-		private void ConfigureMediaPlayer(MediaPlayerFile file)
-		{
-			RadMediaPlayer1.Sources.Clear();
-			RadMediaPlayer1.StartTime = 0;
-			RadMediaPlayer1.Muted = false;
-			RadMediaPlayer1.AutoPlay = false;
+		//protected void RadButton1_Click(object sender, EventArgs e)
+		//{
+		//	MediaPlayerFile file = new MediaPlayerVideoFile();
+		//	file.Sources.Add(new MediaPlayerSource() { Path = RadTextBox1.Text });
+		//	ConfigureMediaPlayer(file);
+		//}
+  //      private void ConfigureMediaPlayer(MediaPlayerFile file)
+  //      {
+  //          RadMediaPlayer1.Sources.Clear();
+  //          RadMediaPlayer1.StartTime = 0;
+  //          RadMediaPlayer1.Muted = false;
+  //          RadMediaPlayer1.AutoPlay = false;
 
-			foreach (MediaPlayerSource source in file.Sources)
-			{
-				RadMediaPlayer1.Sources.Add(source);
-				source.Path = source.Path;
-				source.MimeType = source.MimeType;
+  //          foreach (MediaPlayerSource source in file.Sources)
+  //          {
+  //              RadMediaPlayer1.Sources.Add(source);
+  //              source.Path = source.Path;
+  //              source.MimeType = source.MimeType;
 
-				MediaPlayerSource hdSource = new MediaPlayerSource();
-				RadMediaPlayer1.Sources.Add(hdSource);
-				hdSource.MimeType = source.MimeType;
-				hdSource.Path = source.Path;
-				hdSource.IsHD = true;
-			}
+  //              MediaPlayerSource hdSource = new MediaPlayerSource();
+  //              RadMediaPlayer1.Sources.Add(hdSource);
+  //              hdSource.MimeType = source.MimeType;
+  //              hdSource.Path = source.Path;
+  //              hdSource.IsHD = true;
+  //          }
+  //      }
 	}
 }
