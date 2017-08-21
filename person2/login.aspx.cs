@@ -89,7 +89,7 @@ namespace person2
                             Session["PCountry"] = pCountry;
                             Session["PBirthDate"] = birthday;
                            // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
-                           Response.Redirect("MemberInformationChange.aspx");   //可以session
+                           Response.Redirect("Default.aspx");   //可以session
 
                             //if (Session["PID"] == null)
                             //{

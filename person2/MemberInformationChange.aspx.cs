@@ -17,7 +17,7 @@ namespace person2
         {
             if (Session["PID"] != null)
             {
-                if (this.IsPostBack == false)
+                if (this.IsPostBack == false)// 利用IsPostBack 第一次進入此頁面，IsPostBack值為false。但在同頁執行時，IsPostBack值會為ture。
                 {
                     txtName.Text = Session["PName"].ToString();
                     txtCode.Text = Session["PCode"].ToString();
