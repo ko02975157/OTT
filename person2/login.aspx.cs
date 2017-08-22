@@ -71,11 +71,7 @@ namespace person2
                             string strPBirthDate = rd["PBirthDate"].ToString();
                             DateTime birthday = DateTime.Parse(strPBirthDate);
 
-                            //if(DateTime.TryParse(strPBirthDate,out pBirth = ))
-                               // {
-
-                           // }
-                            
+                        
 
                             this.lblshow.Text = "登入成功";
 
@@ -90,15 +86,6 @@ namespace person2
                             Session["PBirthDate"] = birthday;
                            // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
                            Response.Redirect("Default.aspx");   //可以session
-
-                            //if (Session["PID"] == null)
-                            //{
-                            //    Response.Redirect("Login.aspx");
-                            //}
-                            //else
-                            //{
-                            //    int pId = (int)Session["PID"];
-                            //}
                         }
                         else
                         {

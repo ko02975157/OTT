@@ -11,7 +11,18 @@ namespace person2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["PID"] == null)
+            {
+                Response.Redirect("login.aspx");
+                Response.Write("未登入");
+            }
+            else
+            {
+                Session.Abandon();
+                Response.Redirect("Default.aspx");
+                Response.Write("登出成功");
+            }
+            
         }
     }
 }

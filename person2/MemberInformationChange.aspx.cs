@@ -33,7 +33,8 @@ namespace person2
             }
             else
             {
-                txtName.Text = "失敗";
+                Response.Redirect("Login.aspx");
+                //txtName.Text = "失敗";
             }
 
         }

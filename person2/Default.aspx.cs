@@ -16,7 +16,7 @@ namespace person2
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Logout.aspx");
         }
     }
 }
