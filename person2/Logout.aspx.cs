@@ -20,6 +20,7 @@ namespace person2
             {
                 Session.Abandon();
                 Response.Redirect("Default.aspx");
+ 
                 Response.Write("登出成功");
             }
             
