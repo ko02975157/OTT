@@ -192,6 +192,7 @@
     <Content Include="js\skel-panels.min.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="MediaContent.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\11.png" />
@@ -205,6 +206,7 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="PSuperChange.aspx" />
     <Content Include="ReviewDetail.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="MemberInformationChange.aspx" />
@@ -280,12 +282,26 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MediaContent.aspx.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MediaContent.aspx.designer.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PSuperChange.aspx.cs">
+      <DependentUpon>PSuperChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PSuperChange.aspx.designer.cs">
+      <DependentUpon>PSuperChange.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReviewDetail.aspx.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>

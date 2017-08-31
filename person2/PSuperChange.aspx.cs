@@ -7,16 +7,22 @@ using System.Web.UI.WebControls;
 
 namespace person2
 {
-    public partial class _Default : Page
-    {
+    public partial class PSuperChange : System.Web.UI.Page
+    {   
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["PSuper"] != null || Session["PSuper"].ToString() == "0")
+            {
 
+
+            }
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
+        
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("Logout.aspx");
+
         }
     }
 }
