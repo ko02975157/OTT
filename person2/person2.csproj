@@ -206,10 +206,9 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
     <Content Include="ReviewDetail.aspx" />
-    <Content Include="MediaPlayer.aspx" />
-    <Content Include="MediaUpload.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
@@ -297,6 +296,13 @@
     <Compile Include="MediaContent.aspx.designer.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MediaUpload.aspx.cs">
+      <DependentUpon>MediaUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaUpload.aspx.designer.cs">
+      <DependentUpon>MediaUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PSuperChange.aspx.cs">
       <DependentUpon>PSuperChange.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,20 +316,6 @@
     </Compile>
     <Compile Include="ReviewDetail.aspx.designer.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MediaPlayer.aspx.cs">
-      <DependentUpon>MediaPlayer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MediaPlayer.aspx.designer.cs">
-      <DependentUpon>MediaPlayer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MediaUpload.aspx.cs">
-      <DependentUpon>MediaUpload.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MediaUpload.aspx.designer.cs">
-      <DependentUpon>MediaUpload.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberInformationChange.aspx.cs">
       <DependentUpon>MemberInformationChange.aspx</DependentUpon>
