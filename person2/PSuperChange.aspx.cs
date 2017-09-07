@@ -11,14 +11,19 @@ namespace person2
     {   
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["PSuper"] != null || Session["PSuper"].ToString() == "0")
+            if (Session["PSuper"] != null)
             {
-
-
+                string pSuper = Session["PSuper"].ToString();
+                if (pSuper != "0")
+                {
+                    Response.Redirect("Default.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("Default.aspx");
             }
         }
-
-        
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {

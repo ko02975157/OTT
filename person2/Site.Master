@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="person2.SiteMaster" %>
 
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
 <!DOCTYPE html>
 
 <html lang="zh">
@@ -29,6 +31,21 @@
     <asp:ContentPlaceHolder
         ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .auto-style1 {
+            white-space: nowrap;
+            float: left;
+            position: relative;
+            text-align: left;
+            z-index: 7000\9;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            left: 626px;
+            top: 4px;
+            width: 48px;
+        }
+    </style>
 
 </head>
 <body class="homepage">
@@ -66,13 +83,25 @@
 				
 				<!-- Nav -->
 					<nav id="nav">
-						<ul>
+<%--						<ul>
 							<li class="active"><a href="Default.aspx">Homepage</a></li>
 							<li><a href="registration.aspx">註冊</a></li>
 							<li><a href="login.aspx">登入</a></li>
 							<li><a href="MemberInformationChange.aspx">會員修改</a></li>
 							<li><a href="MediaPlayer.aspx">影片</a></li>
-						</ul>
+                            <li><a href="PSuperChange.aspx">權限修改</a></li>
+
+						</ul>--%>
+                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="Default">
+                        </telerik:RadMenu>
+                        <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT MenuMapTB.mnuID, OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID FROM MenuMapTB INNER JOIN OTTMenuTB ON MenuMapTB.mnuID = OTTMenuTB.MnuID
+Where MenuMapTB.isSuper = @isSuper and MenuMapTB.pRoleType = @pRoleType
+Order by MenuMapTB.ItemOrder">
+                            <SelectParameters>
+                                <asp:SessionParameter DefaultValue="-1" Name="isSuper" SessionField="PSuper" />
+                                <asp:SessionParameter DefaultValue="0" Name="pRoleType" SessionField="PRoleType" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
 					</nav>
 
 			</div>
