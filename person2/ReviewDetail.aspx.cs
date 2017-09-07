@@ -13,8 +13,7 @@ namespace person2
         protected void Page_Load(object sender, EventArgs e)
         {
             MediaPlayerFile file = new MediaPlayerVideoFile();
-            file.Sources.Add(new MediaPlayerSource()
-			{ Path = lbl5.Text });
+            file.Sources.Add(new MediaPlayerSource() { Path = lbl3.Text });
             ConfigureMediaPlayer(file);
             Panel3.Visible = false;
         }
@@ -44,14 +43,14 @@ namespace person2
         {
             Panel2.Visible = false;
             Panel3.Visible = true;
-            Button1.Visible = false;
+            btn1.Visible = false;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Panel1.Visible = false;
             Panel3.Visible = true;
-            Button2.Visible = false;
+            btn2.Visible = false;
         }
     }
 }

@@ -216,6 +216,7 @@
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
+    <Content Include="ReviewMain.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -349,6 +350,13 @@
     </Compile>
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewMain.aspx.cs">
+      <DependentUpon>ReviewMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewMain.aspx.designer.cs">
+      <DependentUpon>ReviewMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
