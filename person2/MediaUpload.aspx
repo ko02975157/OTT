@@ -1,6 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MediaUpload.aspx.cs" Inherits="person2.MediaUpload" %>
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            z-index: 1;
+            left: 98px;
+            top: 624px;
+            position: absolute;
+            width: 78px;
+            margin-bottom: 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server" Font-Size="Medium" Height="450px" RenderMode="Auto" Width="800px" AutoPlay="True">
@@ -19,7 +29,7 @@
     </p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="上傳者 :"></asp:Label>
-        <asp:Label ID="lblName" runat="server" style="z-index: 1; left: 86px; top: 587px; position: absolute; width: 78px" Text="Label"></asp:Label>
+        <asp:Label ID="lblName" runat="server" Text="Label" CssClass="auto-style3"></asp:Label>
 &nbsp;</p>
     <p>
         <asp:Label ID="Label2" runat="server" Text="系名稱 :"></asp:Label>
