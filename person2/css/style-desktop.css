@@ -102,7 +102,7 @@
 			display: inline-block;
 			padding: 0em 3em;
 			border-radius: 40px;
-			background: #131313;
+			background: #f2e6e6;
 		}
 
 		#nav > ul > li
@@ -115,19 +115,18 @@
 				padding-right: 0;
 			}
 
-			#nav > ul > li > a,
-			#nav > ul > li > span
-			{
-				display: block;
-				padding: 1.3em 1.5em;
-				letter-spacing: 1px;
-				text-decoration: none;
-				text-transform: uppercase;
-				font-weight: 200;
-				font-size: 1em;
-				outline: 0;
-				color: #7b7b7b;
-			}
+            #nav > ul > li > a,
+            #nav > ul > li > span {
+                display: block;
+                padding: 1.3em 1.5em;
+                letter-spacing: 1px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 200;
+                font-size: 1em;
+                outline: 0;
+                color: #f23e3e;
+            }
 
 
 			#nav > ul > li > a:hover
