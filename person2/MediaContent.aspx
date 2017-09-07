@@ -6,10 +6,10 @@
     <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server">
     </telerik:RadMediaPlayer>
     <p>
-        &nbsp;</p>
-    <p>
-        <asp:Label ID="Label1" runat="server" Text="標題 : "></asp:Label>
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="標題 : "></asp:Label>
         <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+        </p>
+    <p>
         <br />
         <asp:Label ID="Label2" runat="server" Text="上傳時間 : "></asp:Label>
         <asp:TextBox ID="txtCreatedDate" runat="server"></asp:TextBox>
