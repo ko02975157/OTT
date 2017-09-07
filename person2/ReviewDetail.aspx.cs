@@ -13,7 +13,8 @@ namespace person2
         protected void Page_Load(object sender, EventArgs e)
         {
             MediaPlayerFile file = new MediaPlayerVideoFile();
-            file.Sources.Add(new MediaPlayerSource() { Path = lbl5.Text });
+            file.Sources.Add(new MediaPlayerSource()
+			{ Path = lbl5.Text });
             ConfigureMediaPlayer(file);
             Panel3.Visible = false;
         }

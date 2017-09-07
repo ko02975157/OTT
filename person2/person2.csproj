@@ -209,6 +209,7 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="MediaShow.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
     <Content Include="ReviewDetail.aspx" />
@@ -298,6 +299,13 @@
     </Compile>
     <Compile Include="MediaContent.aspx.designer.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaShow.aspx.cs">
+      <DependentUpon>MediaShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaShow.aspx.designer.cs">
+      <DependentUpon>MediaShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="MediaUpload.aspx.cs">
       <DependentUpon>MediaUpload.aspx</DependentUpon>
@@ -403,7 +411,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
