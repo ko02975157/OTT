@@ -25,6 +25,13 @@
         .auto-style16 {
             height: 27px;
         }
+        .auto-style17 {
+            width: 379px;
+            height: 26px;
+        }
+        .auto-style18 {
+            height: 26px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -32,13 +39,13 @@
                             <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server" Culture="zh-TW" Height="350px" RenderMode="Mobile">
                             </telerik:RadMediaPlayer>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="Button1" runat="server" Text="開始審核" OnClick="Button1_Click" Height="50px" Width="150px" />
+                            <asp:Button ID="btn1" runat="server" Text="開始審核" OnClick="Button1_Click" Height="50px" Width="150px" />
                         </asp:Panel>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Panel ID="Panel2" runat="server" Height="400px" Width="1355px">
                             <telerik:RadMediaPlayer ID="RadMediaPlayer2" runat="server" Culture="zh-TW" Height="350px">
                             </telerik:RadMediaPlayer>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="Button2" runat="server" Text="開始審核" Height="50px" OnClick="Button2_Click" Width="150px" />
+                            <asp:Button ID="btn2" runat="server" Text="開始審核" Height="50px" OnClick="Button2_Click" Width="150px" />
                         </asp:Panel>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -60,13 +67,13 @@
                     <tr>
                         <td class="auto-style15">初審人員代號</td>
                         <td class="auto-style16">
-                            <asp:Label ID="lbl3" runat="server" Text="Label"></asp:Label>
+                            <asp:TextBox ID="txt1" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style15">審查通過</td>
-                        <td class="auto-style16">
-                            <asp:DropDownList ID="DDL1" runat="server">
+                        <td class="auto-style17">審查通過</td>
+                        <td class="auto-style18">
+                            <asp:DropDownList ID="ddl1" runat="server">
                                 <asp:ListItem>1.否</asp:ListItem>
                                 <asp:ListItem>2.是</asp:ListItem>
                             </asp:DropDownList>
@@ -75,13 +82,13 @@
                     <tr>
                         <td class="auto-style5">審查意見</td>
                         <td class="auto-style6">
-                            <asp:Label ID="lbl4" runat="server" Text="Label"></asp:Label>
+                            <asp:TextBox ID="txt2" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style15">審核結果</td>
                         <td class="auto-style16">
-                            <asp:DropDownList ID="DDL2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                            <asp:DropDownList ID="ddl2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                                 <asp:ListItem>1.公開</asp:ListItem>
                                 <asp:ListItem>2.校園內公開</asp:ListItem>
                                 <asp:ListItem>3.限閱</asp:ListItem>
@@ -91,18 +98,18 @@
                     <tr>
                         <td class="auto-style15">youtube URL</td>
                         <td class="auto-style16">
-                            <asp:Label ID="lbl5" runat="server" Text="https://youtu.be/35FSJVS77Fw"></asp:Label>
+                            <asp:Label ID="lbl3" runat="server" Text="https://youtu.be/35FSJVS77Fw"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style15">送出時間</td>
                         <td class="auto-style16">
-                            <asp:Label ID="lbl6" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="lbl4" runat="server" Text="Label"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style16" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="Button3" runat="server" Text="確認" />
+                            <asp:Button ID="btn3" runat="server" Text="確認" />
                         </td>
                     </tr>
                 </table>

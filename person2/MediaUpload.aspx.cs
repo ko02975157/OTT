@@ -14,7 +14,23 @@ namespace person2
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			if (Session["PID"] != null)
+			{
+				  lblName.Text= Session["PName"].ToString();
 
+
+
+
+
+
+			}
+			else
+			{
+
+				Response.Redirect("login.aspx");
+
+			}
+			
 		}
 
 		protected void RadButton1_Click(object sender, EventArgs e)
@@ -52,7 +68,6 @@ namespace person2
 		{
 			radtxtYouTubeURL.Text = "";
 			txtTitle.Text = "";
-			txtPName.Text = "";
 			ddlDepartment.Text = "";
 			txtRestrictPW.Text = " ";
 			ddlOrgStatus.Text = " ";
@@ -73,7 +88,7 @@ namespace person2
 		{
 			string youtubeurl = radtxtYouTubeURL.Text;
 			string title = txtTitle.Text;
-			string pname = txtPName.Text;
+			string pname = lblName.Text;
 			string department = ddlDepartment.SelectedValue;
 			string orgstatus = ddlOrgStatus.SelectedValue;
 			string restrictpw = txtRestrictPW.Text;

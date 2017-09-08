@@ -31,13 +31,13 @@ namespace person2 {
         protected global::Telerik.Web.UI.RadMediaPlayer RadMediaPlayer1;
         
         /// <summary>
-        /// Button1 控制項。
+        /// btn1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btn1;
         
         /// <summary>
         /// Panel2 控制項。
@@ -58,13 +58,13 @@ namespace person2 {
         protected global::Telerik.Web.UI.RadMediaPlayer RadMediaPlayer2;
         
         /// <summary>
-        /// Button2 控制項。
+        /// btn2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btn2;
         
         /// <summary>
         /// Panel3 控制項。
@@ -94,6 +94,42 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label lbl2;
         
         /// <summary>
+        /// txt1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt1;
+        
+        /// <summary>
+        /// ddl1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl1;
+        
+        /// <summary>
+        /// txt2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt2;
+        
+        /// <summary>
+        /// ddl2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl2;
+        
+        /// <summary>
         /// lbl3 控制項。
         /// </summary>
         /// <remarks>
@@ -101,15 +137,6 @@ namespace person2 {
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl3;
-        
-        /// <summary>
-        /// DDL1 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDL1;
         
         /// <summary>
         /// lbl4 控制項。
@@ -121,39 +148,12 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label lbl4;
         
         /// <summary>
-        /// DDL2 控制項。
+        /// btn3 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDL2;
-        
-        /// <summary>
-        /// lbl5 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl5;
-        
-        /// <summary>
-        /// lbl6 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl6;
-        
-        /// <summary>
-        /// Button3 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btn3;
     }
 }

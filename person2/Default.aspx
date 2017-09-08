@@ -4,7 +4,6 @@
 
     <div class="jumbotron">
         <br />
-        <asp:Button ID="btnLogout" runat="server" Text="登出" OnClick="btnLogout_Click" />
     </div>
 
     <div class="auto-style1">

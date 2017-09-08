@@ -41,9 +41,14 @@
             z-index: 7000\9;
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
-            left: 626px;
-            top: 4px;
-            width: 48px;
+            left: 435px;
+            top: 0px;
+            width: 83px;
+            height: 31px;
+            margin-left: 18px;
+        }
+        .auto-style2 {
+            text-align: center;
         }
     </style>
 
@@ -82,7 +87,7 @@
 					</div>
 				
 				<!-- Nav -->
-					<nav id="nav">
+					<nav id="nav" class="auto-style2">
 <%--						<ul>
 							<li class="active"><a href="Default.aspx">Homepage</a></li>
 							<li><a href="registration.aspx">註冊</a></li>
@@ -92,7 +97,7 @@
                             <li><a href="PSuperChange.aspx">權限修改</a></li>
 
 						</ul>--%>
-                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="Default">
+                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="BlackMetroTouch" >
                         </telerik:RadMenu>
                         <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT MenuMapTB.mnuID, OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID FROM MenuMapTB INNER JOIN OTTMenuTB ON MenuMapTB.mnuID = OTTMenuTB.MnuID
 Where MenuMapTB.isSuper = @isSuper and MenuMapTB.pRoleType = @pRoleType

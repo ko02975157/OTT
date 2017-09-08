@@ -209,12 +209,14 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="MediaShow.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
     <Content Include="ReviewDetail.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
+    <Content Include="ReviewMain.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -299,6 +301,13 @@
     <Compile Include="MediaContent.aspx.designer.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MediaShow.aspx.cs">
+      <DependentUpon>MediaShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaShow.aspx.designer.cs">
+      <DependentUpon>MediaShow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MediaUpload.aspx.cs">
       <DependentUpon>MediaUpload.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -341,6 +350,13 @@
     </Compile>
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewMain.aspx.cs">
+      <DependentUpon>ReviewMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewMain.aspx.designer.cs">
+      <DependentUpon>ReviewMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -403,7 +419,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -10,7 +10,6 @@
         <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
         </p>
     <p>
-        <br />
         <asp:Label ID="Label2" runat="server" Text="上傳時間 : "></asp:Label>
         <asp:TextBox ID="txtCreatedDate" runat="server"></asp:TextBox>
     </p>
@@ -27,20 +26,8 @@
         <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="Label6" runat="server" Text="作者 : "></asp:Label>
-        <asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label7" runat="server" Text="檔名 : "></asp:Label>
-        <asp:TextBox ID="txtFileName" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label8" runat="server" Text="檔案位置 : "></asp:Label>
-        <asp:TextBox ID="txtFilePath" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label9" runat="server" Text="youtube URL : "></asp:Label>
-        <asp:TextBox ID="txtYouTubeURL" runat="server"></asp:TextBox>
+        <asp:Label ID="Label13" runat="server" Text="媒體申請時狀態 : "></asp:Label>
+        <asp:TextBox ID="txtOrgStatus" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label10" runat="server" Text="審查通過 :"></asp:Label>
@@ -53,10 +40,6 @@
     <p>
         <asp:Label ID="Label12" runat="server" Text="限閱時須輸入的密碼 : "></asp:Label>
         <asp:TextBox ID="txtRestrictPW" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label13" runat="server" Text="媒體申請時狀態 : "></asp:Label>
-        <asp:TextBox ID="txtOrgStatus" runat="server"></asp:TextBox>
     </p>
     <p>
     </p>
