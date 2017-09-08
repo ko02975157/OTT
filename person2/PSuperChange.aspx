@@ -4,6 +4,7 @@
         .auto-style3 {
             text-decoration: underline;
             margin-top: 0px;
+            margin-bottom: 0px;
         }
     </style>
 </asp:Content>
@@ -21,7 +22,7 @@
                     <EditItemTemplate>
                         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourcePSuper" DataTextField="PSuperDescription" DataValueField="PSuper" SelectedValue='<%# Bind("PSuper", "{0}") %>'>
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourcePSuper" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT * FROM [PSuperType]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSourcePSuper" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT * FROM [PSuperType]" OnSelecting="SqlDataSourcePSuper_Selecting"></asp:SqlDataSource>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("PSuper") %>'></asp:Label>
@@ -38,7 +39,11 @@
             <SortedDescendingHeaderStyle BackColor="#242121" />
         </asp:GridView>
     </div>
-    <asp:SqlDataSource ID="SqlDataSourcePSuper" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [PID], [PName], [PRoleType], [PSuper] FROM [Person]" UpdateCommand="UPDATE Person SET PSuper=@PSuper WHERE (PName= @PName)"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourcePSuper" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [PID], [PName], [PRoleType], [PSuper] FROM [Person] WHERE ([PSuper] &lt;&gt; @PSuper)" UpdateCommand="UPDATE Person SET PSuper = @PSuper WHERE (PName = @PName)">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="0" Name="PSuper" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <p>
     </p>
     <p>

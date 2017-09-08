@@ -78,7 +78,7 @@ namespace person2
                     Response.Write("修改成功");
                     //Response.Redirect("Default.aspx");
                 }
-            }
+            0}
         }
     }
 }

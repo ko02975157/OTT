@@ -36,7 +36,7 @@
         <td class="auto-style13">
             &nbsp;</td>
         <td class="auto-style8">
-            <asp:TextBox ID="txtUsername" runat="server" Height="32px" Width="238px"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" Height="32px" Width="238px">sa</asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@
         <td class="auto-style14">
             &nbsp;</td>
         <td class="auto-style10">
-            <asp:TextBox ID="txtPassword" runat="server" Height="32px" Width="238px" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Height="32px" Width="238px" TextMode="Password">12345</asp:TextBox>
         </td>
     </tr>
     <tr>
