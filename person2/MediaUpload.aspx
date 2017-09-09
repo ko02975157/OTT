@@ -19,7 +19,7 @@
         &nbsp;</p>
     <p>
         <asp:Label ID="Label6" runat="server" Text="YouTubeURL :"></asp:Label>
-&nbsp;<telerik:RadTextBox ID="radtxtYouTubeURL" Runat="server" OnTextChanged="radtxtYouTubeURL_TextChanged1">
+&nbsp;<telerik:RadTextBox ID="radtxtYouTubeURL" Runat="server" >
         </telerik:RadTextBox>
     <telerik:RadButton ID="RadButton2" runat="server" OnClick="RadButton1_Click" style="top: 17px; left: 3px" Text="播放" Height="16px">
     </telerik:RadButton>
