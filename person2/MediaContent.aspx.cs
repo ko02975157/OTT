@@ -14,6 +14,18 @@ namespace person2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["PID"] != null)
+            {
+                //lblName.Text = Session["PName"].ToString();
+
+            }
+            else
+            {
+
+                Response.Redirect("login.aspx");
+
+            }
+
 
         }
 
@@ -33,12 +45,13 @@ namespace person2
                         MediaPlayerFile file = new MediaPlayerVideoFile();
                         file.Sources.Add(new MediaPlayerSource() { Path = (string)rd["MCYouTubeURL"] });
                         ConfigureMediaPlayer(file);
-                        txtTitle.Text = rd["MCTitle"].ToString();
-                        txtCreatedDate.Text = rd["MCCreatedDate"].ToString();
-                        txtIDUploador.Text = rd["PName"].ToString();
-                        txtDepartment.Text = rd["MCDepartment"].ToString();
-                        txtOrgStatus.Text = rd["MCOrgStatus"].ToString();
-                        txtRestrictPW.Text = rd["MCRestrictPW"].ToString();
+                        lblTitle.Text = rd["MCTitle"].ToString();
+                        lblCreatedDate.Text = rd["MCCreatedDate"].ToString();
+                        lblIDUploador.Text = rd["PName"].ToString();
+                        lblDepartment.Text = rd["MCDepartment"].ToString();
+                        lblOrgStatus.Text = rd["MCOrgStatus"].ToString();
+                        lblRestrictPW.Text = rd["MCRestrictPW"].ToString();
+                        lblApprovalStatus.Text = rd["MCApprovalStatus"].ToString();
                     }
                 }
             }          

@@ -49,13 +49,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtTitle 控制項。
+        /// lblTitle 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
         /// Label2 控制項。
@@ -67,31 +67,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtCreatedDate 控制項。
+        /// lblCreatedDate 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCreatedDate;
-        
-        /// <summary>
-        /// Label3 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// txtVisitorCount 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVisitorCount;
+        protected global::System.Web.UI.WebControls.Label lblCreatedDate;
         
         /// <summary>
         /// Label4 控制項。
@@ -103,13 +85,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// txtIDUploador 控制項。
+        /// lblIDUploador 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDUploador;
+        protected global::System.Web.UI.WebControls.Label lblIDUploador;
         
         /// <summary>
         /// Label5 控制項。
@@ -121,13 +103,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtDepartment 控制項。
+        /// lblDepartment 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartment;
+        protected global::System.Web.UI.WebControls.Label lblDepartment;
         
         /// <summary>
         /// Label13 控制項。
@@ -139,13 +121,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// txtOrgStatus 控制項。
+        /// lblOrgStatus 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOrgStatus;
+        protected global::System.Web.UI.WebControls.Label lblOrgStatus;
         
         /// <summary>
         /// Label10 控制項。
@@ -157,13 +139,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// txtIsCheck 控制項。
+        /// lblApprovalStatus 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIsCheck;
+        protected global::System.Web.UI.WebControls.Label lblApprovalStatus;
         
         /// <summary>
         /// Label11 控制項。
@@ -193,12 +175,12 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// txtRestrictPW 控制項。
+        /// lblRestrictPW 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRestrictPW;
+        protected global::System.Web.UI.WebControls.Label lblRestrictPW;
     }
 }

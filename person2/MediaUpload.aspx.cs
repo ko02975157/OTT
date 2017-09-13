@@ -18,11 +18,6 @@ namespace person2
 			{
 				  lblName.Text= Session["PName"].ToString();
 
-
-
-
-
-
 			}
 			else
 			{
@@ -98,7 +93,7 @@ namespace person2
 			using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
 			{
 				SqlCommand cmd = new SqlCommand();
-				cmd.CommandText = "Insert Into MediaUpload (MCYouTubeURL,MCTitle,PName,MCDepartment,MCRestrictPW,MCCreatedDate,MCOrgStatus) VALUES (@MCYouTubeURL,@MCTitle,@PName,@MCDepartment,@MCRestrictPW,@MCCreatedDate,@MCOrgStatus)";
+				cmd.CommandText = "Insert Into MediaUpload (MCYouTubeURL,MCTitle,PName,MCDepartment,MCRestrictPW,MCCreatedDate,MCOrgStatus,MCApprovalStatus) VALUES (@MCYouTubeURL,@MCTitle,@PName,@MCDepartment,@MCRestrictPW,@MCCreatedDate,@MCOrgStatus,'未審核')";
 				cmd.Connection = conn;
 				cmd.Parameters.AddWithValue("@MCYouTubeURL", youtubeurl);
 				cmd.Parameters.AddWithValue("@MCTitle", title);
@@ -120,5 +115,7 @@ namespace person2
 		{
 
 		}
-	}
+
+        
+    }
 }
