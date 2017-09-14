@@ -37,7 +37,7 @@
         }
         .auto-style12 {
                 height: 74px;
-                width: 385px;
+                width: 517px;
             }
         .auto-style13 {
         width: 375px;
@@ -80,17 +80,17 @@
     }
     .auto-style22 {
         height: 52px;
-                width: 385px;
+                width: 517px;
             }
     .auto-style23 {
-        width: 1011px;
+        width: 1047px;
         height: 35px;
         left: 748px;
         top: 10px;
         margin-bottom: 1px;
     }
             .auto-style24 {
-                width: 385px;
+                width: 517px;
             }
     </style>
 
@@ -136,7 +136,7 @@
                         &nbsp;</td>
                     <td class="auto-style24">
                         <asp:TextBox ID="txtCode" runat="server" Font-Size="X-Large"></asp:TextBox>
-                    </td>
+                        (校外人士不用填)</td>
                 </tr>
                 <tr>
                     <td class="auto-style10">
@@ -165,7 +165,7 @@
                     <td class="auto-style13">
                         &nbsp;</td>
                     <td class="auto-style24">
-                        <asp:TextBox ID="txtEmail" runat="server" Width="369px" Font-Size="X-Large" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" Width="443px" Font-Size="X-Large" TextMode="Email"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

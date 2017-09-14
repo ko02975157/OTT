@@ -22,10 +22,7 @@ namespace person2
             }
             else
             {
-                //
-                //SqlDataSourceRoleType.DataBind();
-                //ddlroletype.DataBind();
-                //ddlroletype.SelectedValue = "";
+
             }
         }
 

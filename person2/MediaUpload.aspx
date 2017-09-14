@@ -2,13 +2,12 @@
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <style type="text/css">
-        .auto-style3 {
-            z-index: 1;
-            left: 98px;
-            top: 624px;
-            position: absolute;
-            width: 78px;
-            margin-bottom: 0px;
+        .auto-style5 {
+            height: 252px;
+        }
+        .auto-style6 {
+            top: 17px;
+            left: 3px;
         }
     </style>
 </asp:Content>
@@ -18,22 +17,25 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:Label ID="Label6" runat="server" Text="YouTubeURL :"></asp:Label>
-&nbsp;<telerik:RadTextBox ID="radtxtYouTubeURL" Runat="server">
+<div  class="auto-style5">
+     <p>    
+    <asp:Label ID="Label6" runat="server" Text="YouTubeURL :"></asp:Label>
+&nbsp;<telerik:RadTextBox ID="radtxtYouTubeURL" Runat="server" >
         </telerik:RadTextBox>
-    <telerik:RadButton ID="RadButton2" runat="server" OnClick="RadButton1_Click" style="top: 17px; left: 3px" Text="播放" Height="16px">
+    <telerik:RadButton ID="RadButton2" runat="server" OnClick="RadButton1_Click" Text="播放" Height="22px">
     </telerik:RadButton>
+      </p>
     <p>
         <asp:Label ID="Label5" runat="server" Text="標題 :"></asp:Label>
         <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="上傳者 :"></asp:Label>
-        <asp:Label ID="lblName" runat="server" Text="Label" CssClass="auto-style3"></asp:Label>
+        <asp:Label ID="lblName" runat="server" Text="Label" ></asp:Label>
 &nbsp;</p>
     <p>
         <asp:Label ID="Label2" runat="server" Text="系名稱 :"></asp:Label>
-        <asp:DropDownList ID="ddlDepartment" runat="server">
+        <asp:DropDownList ID="ddlDepartment" runat="server" >
             <asp:ListItem>企業管理學系</asp:ListItem>
             <asp:ListItem>會計學系</asp:ListItem>
             <asp:ListItem>財務金融學系國際金融管理組</asp:ListItem>
@@ -91,6 +93,8 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Text="清除" Height="30px" Width="80px" />
     </p>
+</div>
+</p>
     <p>
         &nbsp;</p>
     <p>

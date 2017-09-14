@@ -41,7 +41,7 @@
             z-index: 7000\9;
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
-            left: 435px;
+            left: 458px;
             top: 0px;
             width: 83px;
             height: 31px;
@@ -97,11 +97,11 @@
                             <li><a href="PSuperChange.aspx">權限修改</a></li>
 
 						</ul>--%>
-                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="BlackMetroTouch" OnItemClick="RadMenu1_ItemClick" >
+                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="BlackMetroTouch" ShowToggleHandle="True" >
                         </telerik:RadMenu>
                         <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT MenuMapTB.mnuID, OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID FROM MenuMapTB INNER JOIN OTTMenuTB ON MenuMapTB.mnuID = OTTMenuTB.MnuID
-Where MenuMapTB.isSuper = @isSuper and MenuMapTB.pRoleType = @pRoleType
-Order by MenuMapTB.ItemOrder">
+                              Where MenuMapTB.isSuper = @isSuper and MenuMapTB.pRoleType = @pRoleType
+                              Order by MenuMapTB.ItemOrder">
                             <SelectParameters>
                                 <asp:SessionParameter DefaultValue="-1" Name="isSuper" SessionField="PSuper" />
                                 <asp:SessionParameter DefaultValue="0" Name="pRoleType" SessionField="PRoleType" />
