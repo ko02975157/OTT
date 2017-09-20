@@ -14,5 +14,10 @@ namespace person2
 
 
         }
+
+        protected void RadMenu1_ItemClick(object sender, Telerik.Web.UI.RadMenuEventArgs e)
+        {
+
+        }
     }
 }
