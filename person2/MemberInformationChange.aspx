@@ -29,31 +29,6 @@
     .auto-style16 {
         width: 4px;
     }
-    .auto-style18 {
-        width: 266px;
-        text-align: center;
-        background-color: #FFFFFF;
-        padding: 16px 4px 16px 4px;
-        height: 52px;
-    }
-    .auto-style19 {
-        width: 243px;
-        text-align: center;
-        background-color: #CCCCCC;
-        padding: 16px 4px 16px 4px;
-        height: 52px;
-    }
-    .auto-style20 {
-        width: 4px;
-        height: 52px;
-    }
-    .auto-style21 {
-        width: 375px;
-        height: 52px;
-    }
-    .auto-style22 {
-        height: 52px;
-    }
     .auto-style23 {
         width: 969px;
         height: 35px;
@@ -67,18 +42,6 @@
     <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div>
             <table class="auto-style23">
-                <tr>
-                    <td class="auto-style18">
-                        </td>
-                    <td class="auto-style19">
-                    </td>
-                    <td class="auto-style20">
-                        </td>
-                    <td class="auto-style21">
-                        </td>
-                    <td class="auto-style22">
-                    </td>
-                </tr>
                 <tr>
                     <td class="auto-style8">
                         &nbsp;</td>

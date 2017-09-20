@@ -21,8 +21,8 @@ namespace person2
 			}
 			else
 			{
-
-				Response.Redirect("login.aspx");
+                Response.Write("<script>alert('您未登入，前往登入'); location.href='login.aspx'; </script>");
+                //Response.Redirect("login.aspx");
 
 			}
 			
@@ -57,29 +57,8 @@ namespace person2
 
 			}
 		}
-
-
-		protected void Button2_Click(object sender, EventArgs e)
-		{
-			radtxtYouTubeURL.Text = "";
-			txtTitle.Text = "";
-			ddlDepartment.Text = "";
-			txtRestrictPW.Text = " ";
-			ddlOrgStatus.Text = " ";
-
-		}
-
-		protected void Button3_Click(object sender, EventArgs e)
-		{
-			Response.Redirect("Default.aspx");
-		}
-
-		protected void radtxtYouTubeURL_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		protected void Button1_Click1(object sender, EventArgs e)
+    
+		protected void btnMediaUpload_Click1(object sender, EventArgs e)
 		{
 			string youtubeurl = radtxtYouTubeURL.Text;
 			string title = txtTitle.Text;
@@ -106,16 +85,19 @@ namespace person2
 				int result = cmd.ExecuteNonQuery();
 				if (result == 1)
 				{
-					Response.Redirect("MediaUpload.aspx");
-				}
+                    Response.Write("<script>alert('影片上傳成功!,前往首頁'); location.href='Default.aspx'; </script>");
+                    //Response.Redirect("MediaUpload.aspx");
+                }
 			}
 		}
 
-		protected void radtxtYouTubeURL_TextChanged1(object sender, EventArgs e)
-		{
-
-		}
-
-        
+        protected void btnClean_Click1(object sender, EventArgs e)
+        {
+            radtxtYouTubeURL.Text = "";
+            txtTitle.Text = "";
+            ddlDepartment.Text = "";
+            txtRestrictPW.Text = " ";
+            ddlOrgStatus.Text = " ";
+        }
     }
 }

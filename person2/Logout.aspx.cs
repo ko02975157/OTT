@@ -19,9 +19,11 @@ namespace person2
             else
             {
                 Session.Abandon();
-                Response.Redirect("Default.aspx");
- 
-                Response.Write("登出成功");
+
+                Response.Write("<script>alert('登出成功，前往首頁!'); location.href='Default.aspx'; </script>");
+                //Response.Redirect("Default.aspx");
+
+                //Response.Write("登出成功");
             }
             
         }

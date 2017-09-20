@@ -5,10 +5,9 @@
         .auto-style5 {
             height: 252px;
         }
-        .auto-style6 {
-            top: 17px;
-            left: 3px;
-        }
+        .auto-style7 {
+        height: 35px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -88,10 +87,10 @@
         <asp:Label ID="Label3" runat="server" Text="限閱時須輸入的密碼 :"></asp:Label>
         <asp:TextBox ID="txtRestrictPW" runat="server"></asp:TextBox>
     </p>
-    <p style="height: 35px">
-        <asp:Button ID="Button1" runat="server" Height="30px" OnClick="Button1_Click1" Text="確定上傳" Width="80px" />
+    <p class="auto-style7">
+        <asp:Button ID="btnMediaUpload" runat="server" Height="30px" OnClick="btnMediaUpload_Click1" Text="上傳影片" Width="80px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="清除" Height="30px" Width="80px" />
+        <asp:Button ID="btnClean" runat="server" Text="清除" Height="30px" Width="80px" OnClick="btnClean_Click1" />
     </p>
 </div>
 </p>

@@ -78,7 +78,8 @@ namespace person2
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
                 {
-                    Response.Redirect("Default.aspx");
+                    Response.Write("<script>alert('註冊成功，前往登入頁面進行會員登入!'); location.href='Login.aspx'; </script>");
+                    //Response.Redirect("Default.aspx");
                 }
 
 

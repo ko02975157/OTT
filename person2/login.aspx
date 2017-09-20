@@ -51,8 +51,7 @@
     </tr>
     <tr>
         <td class="auto-style11">
-            <asp:Label ID="lblshow" runat="server" Text="          "></asp:Label>
-        </td>
+            &nbsp;</td>
         <td class="auto-style13">
             &nbsp;</td>
         <td class="auto-style8">
