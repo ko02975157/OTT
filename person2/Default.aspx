@@ -4,17 +4,21 @@
 
     <div class="jumbotron">
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </div>
 
-    <div class="auto-style1">
-    </div>
-
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="HeadPlaceHolder">
-    <style type="text/css">
-    .auto-style1 {
-        height: 40px;
-    }
-</style>
-</asp:Content>
+    </asp:Content>
 
