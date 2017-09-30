@@ -74,14 +74,7 @@
         width: 4px;
         height: 52px;
     }
-    .auto-style21 {
-        width: 375px;
-        height: 52px;
-    }
-    .auto-style22 {
-        height: 52px;
-                width: 517px;
-            }
+       
     .auto-style23 {
         width: 1047px;
         height: 35px;
@@ -136,7 +129,7 @@
                         &nbsp;</td>
                     <td class="auto-style24">
                         <asp:TextBox ID="txtCode" runat="server" Font-Size="X-Large"></asp:TextBox>
-                        (校外人士不用填)</td>
+                        </td>
                 </tr>
                 <tr>
                     <td class="auto-style10">
@@ -385,16 +378,49 @@
                     <td class="auto-style10">
                     </td>
                     <td class="auto-style11">
-                        <asp:Label ID="Label12" runat="server" Text="職業" CssClass="auto-style7" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="Label12" runat="server" Text="職稱" CssClass="auto-style7" Font-Size="X-Large"></asp:Label>
                     </td>
                     <td class="auto-style17">
                         &nbsp;</td>
                     <td class="auto-style14">
                         &nbsp;</td>
                     <td class="auto-style12">
-                        <asp:DropDownList ID="ddlCareer" runat="server" DataSourceID="SqlDataSourceCareer" DataTextField="careername" DataValueField="career" Font-Size="X-Large" Height="28px" Width="165px">
+                        <asp:DropDownList ID="ddlPtitle" runat="server" DataSourceID="SqlDataSourceTitle" DataTextField="PTitleName" DataValueField="PTitleNumber" Font-Size="X-Large">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourceCareer" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [career], [careername] FROM [Career]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSourceTitle" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT * FROM [PTitle]"></asp:SqlDataSource>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style10">
+                        &nbsp;</td>
+                    <td class="auto-style11">
+                        <asp:Label ID="Label13" runat="server" Font-Size="X-Large" Text="學系"></asp:Label>
+                    </td>
+                    <td class="auto-style17">
+                        &nbsp;</td>
+                    <td class="auto-style14">
+                        &nbsp;</td>
+                    <td class="auto-style12">
+                        <asp:DropDownList ID="ddlPDepartment" runat="server" DataSourceID="SqlDataSourceDepartment" DataTextField="PDepartmentName" DataValueField="PDepartmentNumber" Font-Size="X-Large">
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSourceDepartment" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT [PDepartmentNumber], [PDepartmentName] FROM [PDepartment]"></asp:SqlDataSource>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style10">
+                        &nbsp;</td>
+                    <td class="auto-style11">
+                        <asp:Label ID="Label14" runat="server" Font-Size="X-Large" Text="學院"></asp:Label>
+                    </td>
+                    <td class="auto-style17">
+                        &nbsp;</td>
+                    <td class="auto-style14">
+                        &nbsp;</td>
+                    <td class="auto-style12">
+                        <asp:DropDownList ID="ddlPCollege" runat="server" DataSourceID="SqlDataSourceCollege" DataTextField="PCollegeName" DataValueField="PCollegeNumber" Font-Size="X-Large">
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSourceCollege" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT * FROM [PCollege]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                     </td>
                 </tr>
             </table>

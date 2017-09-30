@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
+using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
@@ -12,10 +14,40 @@ namespace person2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MediaPlayerFile file = new MediaPlayerVideoFile();
-            file.Sources.Add(new MediaPlayerSource() { Path = lbl3.Text });
-            ConfigureMediaPlayer(file);
-            Panel3.Visible = false;
+
+            /*if (Session["PID"] != null)
+            {
+                //lblName.Text = Session["PName"].ToString();
+
+            }
+            else
+            {
+
+                Response.Redirect("login.aspx");
+
+            }*/
+
+        }
+        protected void lbMedia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
+            {
+                conn.Open();
+                string sqlStatement = "Select * From MediaUpload Where MCID= @MCID";
+                SqlCommand cmd = new SqlCommand(sqlStatement, conn);
+                cmd.Parameters.AddWithValue("@MCID", lbMedia.SelectedValue.ToString());
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        MediaPlayerFile file = new MediaPlayerVideoFile();
+                        file.Sources.Add(new MediaPlayerSource() { Path = (string)rd["MCYouTubeURL"] });
+                        ConfigureMediaPlayer(file);
+                        lblbatch.Text = rd["MCCreatedDate"].ToString();
+                    }
+                }
+            }
         }
         private void ConfigureMediaPlayer(MediaPlayerFile file)
         {
@@ -24,7 +56,7 @@ namespace person2
             RadMediaPlayer1.StartTime = 0;
             RadMediaPlayer1.Muted = false;
             RadMediaPlayer1.AutoPlay = false;
-        
+
 
             foreach (MediaPlayerSource source in file.Sources)
             {
@@ -34,23 +66,9 @@ namespace person2
             }
         }
 
-		protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btncorrect_Click(object sender, EventArgs e)
         {
-            Panel2.Visible = false;
-            Panel3.Visible = true;
-            btn1.Visible = false;
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Panel1.Visible = false;
-            Panel3.Visible = true;
-            btn2.Visible = false;
+            
         }
     }
 }

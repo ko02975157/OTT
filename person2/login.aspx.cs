@@ -29,10 +29,14 @@ namespace person2
             string pEmail = "";
             string pPassword = "";
             string pCountry = "";
-            //string pYear = "";
-            //string pMonth = "";
-            //string pDay = "";
-            //DateTime pBirth = DateTime.Parse(pYear + "/" + pMonth + "/" + pDay);
+           // int pTitle = 0;
+            //int pDepartment = 0;
+            //int pCollege = 0;
+
+
+            //string pTitle = "";
+            //string pDepartment = "";
+            // string pCollege = "";
             try
             {
                 using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
@@ -53,14 +57,16 @@ namespace person2
                             string strPRoleType = rd["PRoleType"].ToString();
                             if (int.TryParse(strPRoleType, out pRoleType) == false)
                             {
-                                this.lblshow.Text = "登入成功，但資料有錯誤! pRoleType的值為" + strPRoleType;
+                                
+                                //this.lblshow.Text = "登入成功，但資料有錯誤! pRoleType的值為" + strPRoleType;
                                 return;
                             }
 
                             string strPSuper = rd["PSuper"].ToString();
                             if (int.TryParse(strPSuper, out pSuper) == false)
                             {
-                                this.lblshow.Text = "登入成功，但資料有錯誤! pSuper的值為" + strPSuper;
+                                
+                                //this.lblshow.Text = "登入成功，但資料有錯誤! pSuper的值為" + strPSuper;
                                 return;
                             }
                             pCode = rd["PCode"].ToString();
@@ -70,10 +76,13 @@ namespace person2
                             pCountry = rd["PCountry"].ToString();
                             string strPBirthDate = rd["PBirthDate"].ToString();
                             DateTime birthday = DateTime.Parse(strPBirthDate);
+                            //string strpTitle = rd["PTitle"].ToString();
+                            //int.TryParse(strpTitle, out pTitle);
+                           // pDepartment = rd["PDepartmnet"].ToString();
+                           // pCollege = rd["PCollege"].ToString();
 
-                        
-
-                            this.lblshow.Text = "登入成功";
+                            Response.Write("<script>alert('登入成功!'); location.href='Default.aspx'; </script>");
+                            
 
                             Session["PID"] = pId;
                             Session["PRoleType"] = pRoleType;
@@ -84,23 +93,28 @@ namespace person2
                             Session["PPassword"] = pPassword;
                             Session["PCountry"] = pCountry;
                             Session["PBirthDate"] = birthday;
-                           // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
-                           Response.Redirect("Default.aspx");   //可以session
+                           // Session["PTitle"] = pTitle;
+                            //Session["PDepartmnet"] = pDepartment;
+                            //Session["PCollege"] = pCollege;
+                            // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
+                            //Response.Redirect("Default.aspx");   //可以session
                         }
                         else
                         {
-                            this.lblshow.Text = "登入失敗";
+                            Response.Write("<script>alert('登入失敗!'); location.href='login.aspx'; </script>");
+
+                            //this.lblshow.Text = "登入失敗";
                         }
                     }
                    
                 }
-                this.lblshow.Text = "資料連線成功";
+                //this.lblshow.Text = "資料連線成功";
 
             }
 
             catch(Exception)
             {
-                this.lblshow.Text = "資料連線錯誤";
+                //this.lblshow.Text = "資料連線錯誤";
             }
         }
 
@@ -108,7 +122,9 @@ namespace person2
 
         protected void btnRegistration_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("registration.aspx");
+            Response.Write("<script>alert('前往註冊!'); location.href='registration.aspx'; </script>");
+
+            //Response.Redirect("registration.aspx");
         } 
     }
 }

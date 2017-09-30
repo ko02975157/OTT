@@ -1,7 +1,9 @@
 ﻿<% @  Page Language ="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="person2.login" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <style type="text/css">
+   
     .auto-style8 {
             height: 46px;
             width: 460px;
@@ -51,8 +53,7 @@
     </tr>
     <tr>
         <td class="auto-style11">
-            <asp:Label ID="lblshow" runat="server" Text="          "></asp:Label>
-        </td>
+            &nbsp;</td>
         <td class="auto-style13">
             &nbsp;</td>
         <td class="auto-style8">
@@ -63,3 +64,5 @@
     </tr>
 </table>
 </asp:Content>
+
+

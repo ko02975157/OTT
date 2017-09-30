@@ -6,7 +6,7 @@
 
 <html lang="zh">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <%--    <webopt:bundlereference runat="server" path="~/Content/css" />--%>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -41,15 +41,15 @@
             z-index: 7000\9;
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
-            left: 458px;
-            top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            /*left: 0px;
+            top: 0px;*/
             width: 83px;
             height: 31px;
-            margin-left: 18px;
+            /*margin-left: 18px;*/
         }
-        .auto-style2 {
-            text-align: center;
-        }
+
     </style>
 
 </head>
@@ -82,22 +82,13 @@
 					
 				<!-- Logo -->
 					<div id="logo">
-						<h1><a href="#">Monochromed</a></h1>
-						<span>Design by TEMPLATED</span>
+						<h1><a href="#">銘傳大學網路電視台</a></h1>
+						<span>Design by MCUIM</span>
 					</div>
 				
 				<!-- Nav -->
-					<nav id="nav" class="auto-style2">
-<%--						<ul>
-							<li class="active"><a href="Default.aspx">Homepage</a></li>
-							<li><a href="registration.aspx">註冊</a></li>
-							<li><a href="login.aspx">登入</a></li>
-							<li><a href="MemberInformationChange.aspx">會員修改</a></li>
-							<li><a href="MediaPlayer.aspx">影片</a></li>
-                            <li><a href="PSuperChange.aspx">權限修改</a></li>
-
-						</ul>--%>
-                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="BlackMetroTouch" ShowToggleHandle="True" >
+					<nav id="nav">
+                        <telerik:RadMenu ID="RadMenu1" Runat="server" CssClass="auto-style1" DataFieldID="mnuID" DataFieldParentID="ParentID" DataNavigateUrlField="Url" DataSourceID="dsMenu" DataTextField="Text" DataValueField="Text" RenderMode="Auto" Skin="Metro" ShowToggleHandle="True" >
                         </telerik:RadMenu>
                         <asp:SqlDataSource ID="dsMenu" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString %>" SelectCommand="SELECT MenuMapTB.mnuID, OTTMenuTB.Text, OTTMenuTB.Url, OTTMenuTB.ParentID FROM MenuMapTB INNER JOIN OTTMenuTB ON MenuMapTB.mnuID = OTTMenuTB.MnuID
                               Where MenuMapTB.isSuper = @isSuper and MenuMapTB.pRoleType = @pRoleType

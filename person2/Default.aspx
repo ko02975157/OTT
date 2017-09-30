@@ -6,19 +6,14 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
     </div>
 
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="HeadPlaceHolder">
-    </asp:Content>
+    <style type="text/css">
+    .auto-style1 {
+        height: 40px;
+    }
+</style>
+</asp:Content>
 
