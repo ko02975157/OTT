@@ -85,9 +85,8 @@
                         <td class="auto-style15">審核結果</td>
                         <td class="auto-style16">
                             <asp:DropDownList ID="ddlresult" runat="server" >
-                                <asp:ListItem>1.公開</asp:ListItem>
-                                <asp:ListItem>2.校園內公開</asp:ListItem>
-                                <asp:ListItem>3.限閱</asp:ListItem>
+                                <asp:ListItem>1.通過</asp:ListItem>
+                                <asp:ListItem>2.不通過</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -105,7 +104,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style16" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="btncorrect" runat="server" Text="確認" OnClick="btncorrect_Click" />
+                            <asp:Button ID="btnsent" runat="server" Text="送出" OnClick="btncorrect_Click" />
                         </td>
                     </tr>
                 </table>

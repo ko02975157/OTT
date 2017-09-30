@@ -213,11 +213,13 @@
     <Content Include="MediaShow.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
+    <Content Include="ReviewAll.aspx" />
     <Content Include="ReviewDetail.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="ReviewMain.aspx" />
+    <Content Include="ReviewWait.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -324,6 +326,13 @@
     <Compile Include="PSuperChange.aspx.designer.cs">
       <DependentUpon>PSuperChange.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReviewAll.aspx.cs">
+      <DependentUpon>ReviewAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewAll.aspx.designer.cs">
+      <DependentUpon>ReviewAll.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReviewDetail.aspx.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,6 +368,13 @@
     </Compile>
     <Compile Include="ReviewMain.aspx.designer.cs">
       <DependentUpon>ReviewMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.designer.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -421,7 +437,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
