@@ -3,14 +3,14 @@
     <style type="text/css">
 
         .auto-style2 {
-            width: 32%;
+            width: 39%;
         }
         .auto-style12 {
             width: 448px;
             height: 30px;
         }
         .auto-style4 {
-            width: 222px;
+            width: 459px;
             height: 24px;
         }
         .auto-style11 {
@@ -32,8 +32,8 @@
         .auto-style20 {
             width: 191px;
         }
-        .auto-style22 {
-            width: 222px;
+        .auto-style23 {
+            width: 459px;
             height: 30px;
         }
         </style>
@@ -50,25 +50,25 @@
 <asp:Panel ID="Panel2" runat="server" Height="386px">
     <table class="auto-style2">
         <tr>
-            <td class="auto-style22">批次代號</td>
+            <td class="auto-style23">批次代號</td>
             <td class="auto-style12">
                 <asp:Label ID="lblbatch" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">影音代號</td>
+            <td class="auto-style23">影音代號</td>
             <td class="auto-style12">
                 <asp:Label ID="lblmcid" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">批次名稱</td>
+            <td class="auto-style23">批次名稱</td>
             <td class="auto-style12">
                 <asp:Label ID="lblbatchname" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">成立時間</td>
+            <td class="auto-style23">成立時間</td>
             <td class="auto-style12">
                 <asp:Label ID="lblcreattime" runat="server" Text="Label"></asp:Label>
             </td>
@@ -80,19 +80,19 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">送至時間</td>
+            <td class="auto-style23">送至時間</td>
             <td class="auto-style12">
                 <asp:Label ID="lblreceivetime" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">審核意見</td>
+            <td class="auto-style23">審核意見</td>
             <td class="auto-style12">
                 <asp:TextBox ID="txtreview" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">審核結果</td>
+            <td class="auto-style23">審核結果</td>
             <td class="auto-style12">
                 <asp:DropDownList ID="ddlresult" runat="server">
                     <asp:ListItem>1.通過</asp:ListItem>
@@ -101,7 +101,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style22">送出時間</td>
+            <td class="auto-style23">送出時間</td>
             <td class="auto-style12">
                 <asp:Label ID="lblsendtime" runat="server" Text="Label"></asp:Label>
             </td>
