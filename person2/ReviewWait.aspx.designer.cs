@@ -10,7 +10,7 @@
 namespace person2 {
     
     
-    public partial class Reviewwait {
+    public partial class ReviewWait {
         
         /// <summary>
         /// lblready 控制項。

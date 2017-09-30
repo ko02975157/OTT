@@ -10,7 +10,7 @@
 namespace person2 {
     
     
-    public partial class Reviewall {
+    public partial class ReviewAll {
         
         /// <summary>
         /// Panel1 控制項。
