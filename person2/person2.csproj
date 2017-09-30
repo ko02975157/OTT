@@ -191,6 +191,7 @@
     <Content Include="images\pics11.jpg" />
     <Content Include="images\pics12.jpg" />
     <Content Include="images\pics13.jpg" />
+    <Content Include="images\帶燈放大鏡_icon.png" />
     <Content Include="js\html5shiv.js" />
     <Content Include="js\init.js" />
     <Content Include="js\skel-panels.min.js" />
@@ -413,7 +414,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
