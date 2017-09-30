@@ -212,6 +212,7 @@
     <Content Include="MediaShow.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
+    <Content Include="re.aspx" />
     <Content Include="ReviewDetail.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
@@ -323,6 +324,13 @@
     <Compile Include="PSuperChange.aspx.designer.cs">
       <DependentUpon>PSuperChange.aspx</DependentUpon>
     </Compile>
+    <Compile Include="re.aspx.cs">
+      <DependentUpon>re.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="re.aspx.designer.cs">
+      <DependentUpon>re.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReviewDetail.aspx.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,7 +428,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

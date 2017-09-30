@@ -29,14 +29,13 @@ namespace person2
             string pEmail = "";
             string pPassword = "";
             string pCountry = "";
-           // int pTitle = 0;
-            //int pDepartment = 0;
+            //int pTitle = 0;
+           // int pDepartment = 0;
             //int pCollege = 0;
-
-
-            //string pTitle = "";
-            //string pDepartment = "";
-            // string pCollege = "";
+            
+           // string pTitle = "";
+           // string pDepartment = "";
+             //string pCollege = "";
             try
             {
                 using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
@@ -76,10 +75,9 @@ namespace person2
                             pCountry = rd["PCountry"].ToString();
                             string strPBirthDate = rd["PBirthDate"].ToString();
                             DateTime birthday = DateTime.Parse(strPBirthDate);
-                            //string strpTitle = rd["PTitle"].ToString();
-                            //int.TryParse(strpTitle, out pTitle);
+                            //pTitle = rd["PTitle"].ToString();
                            // pDepartment = rd["PDepartmnet"].ToString();
-                           // pCollege = rd["PCollege"].ToString();
+                           //pCollege = rd["PCollege"].ToString();
 
                             Response.Write("<script>alert('登入成功!'); location.href='Default.aspx'; </script>");
                             
@@ -93,8 +91,8 @@ namespace person2
                             Session["PPassword"] = pPassword;
                             Session["PCountry"] = pCountry;
                             Session["PBirthDate"] = birthday;
-                           // Session["PTitle"] = pTitle;
-                            //Session["PDepartmnet"] = pDepartment;
+                            //Session["PTitle"] = pTitle;
+                           // Session["PDepartmnet"] = pDepartment;
                             //Session["PCollege"] = pCollege;
                             // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
                             //Response.Redirect("Default.aspx");   //可以session

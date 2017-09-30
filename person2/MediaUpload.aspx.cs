@@ -93,12 +93,12 @@ namespace person2
                         {
 
                             conn.Open();
-                            //string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
-                            //SqlCommand cmd = new SqlCommand(sqlStatement, conn);
-                            cmd.Parameters.AddWithValue("@PRoleType", 2);
+                            string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
+                            SqlCommand cmd2 = new SqlCommand(sqlStatement, conn);
+                            cmd2.Parameters.AddWithValue("@PRoleType", 2);
                             Random rnd = new Random(DateTime.Now.Second);
                             
-                            using (SqlDataReader rd = cmd.ExecuteReader())
+                            using (SqlDataReader rd = cmd2.ExecuteReader())
                             {
                                 while (rd.Read())
                                 {
@@ -109,7 +109,7 @@ namespace person2
                                     judgerList.Add(jarger);
                                 }
                             }
-                            judgerList.Sort();
+                               judgerList.Sort();
                             int i = 0;
                             foreach (Judger jarger in judgerList)
                             {
@@ -117,10 +117,10 @@ namespace person2
                                     break;
                                 if (i > 2)
                                     break;
-                               // cmd.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
-                               // cmd.Parameters.Clear();
-                                //cmd.Parameters.AddWithValue("@MCID", )
-                                // 將jarger的pid寫入到此影片的評審欄位
+                                cmd2.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
+                                cmd2.Parameters.Clear();
+                                cmd2.Parameters.AddWithValue("@MCID", )
+                                //將jarger的pid寫入到此影片的評審欄位
                                 i++;
                             }
                         }
