@@ -4,12 +4,11 @@
 
     <div class="jumbotron">
         <br />
+        <br />
+        <br />
     </div>
 
-    <div class="auto-style1">
-    </div>
-
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="HeadPlaceHolder">
     <style type="text/css">
     .auto-style1 {

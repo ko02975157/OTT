@@ -17,12 +17,14 @@ namespace person2
 			if (Session["PID"] != null)
 			{
 				  lblName.Text= Session["PName"].ToString();
+                lblDepartment.Text = Session["PDepartment"].ToString();
+                    
 
 			}
 			else
 			{
-
-				Response.Redirect("login.aspx");
+                Response.Write("<script>alert('您未登入，前往登入'); location.href='login.aspx'; </script>");
+                //Response.Redirect("login.aspx");
 
 			}
 			
@@ -57,48 +59,26 @@ namespace person2
 
 			}
 		}
-
-
-		protected void Button2_Click(object sender, EventArgs e)
-		{
-			radtxtYouTubeURL.Text = "";
-			txtTitle.Text = "";
-			ddlDepartment.Text = "";
-			txtRestrictPW.Text = " ";
-			ddlOrgStatus.Text = " ";
-
-		}
-
-		protected void Button3_Click(object sender, EventArgs e)
-		{
-			Response.Redirect("Default.aspx");
-		}
-
-		protected void radtxtYouTubeURL_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		protected void Button1_Click1(object sender, EventArgs e)
+    
+		protected void btnMediaUpload_Click1(object sender, EventArgs e)
 		{
 			string youtubeurl = radtxtYouTubeURL.Text;
 			string title = txtTitle.Text;
-			string pname = lblName.Text;
-			string department = ddlDepartment.SelectedValue;
+            string pname = lblName.Text;
 			string orgstatus = ddlOrgStatus.SelectedValue;
 			string restrictpw = txtRestrictPW.Text;
 			DateTime createdtime = DateTime.Now;
+            List<Judger> judgerList = new List<Judger>();
 
-
-			using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
 			{
 				SqlCommand cmd = new SqlCommand();
-				cmd.CommandText = "Insert Into MediaUpload (MCYouTubeURL,MCTitle,PName,MCDepartment,MCRestrictPW,MCCreatedDate,MCOrgStatus,MCApprovalStatus) VALUES (@MCYouTubeURL,@MCTitle,@PName,@MCDepartment,@MCRestrictPW,@MCCreatedDate,@MCOrgStatus,'未審核')";
+				cmd.CommandText = "Insert Into MediaUpload (MCYouTubeURL,MCTitle,PName,MCDepartment,MCRestrictPW,MCCreatedDate,MCOrgStatus,MCApprovalStatus) OUTPUT INSERTED.MCID VALUES (@MCYouTubeURL,@MCTitle,@PName,@MCDepartment,@MCRestrictPW,@MCCreatedDate,@MCOrgStatus,'未審核')";
 				cmd.Connection = conn;
 				cmd.Parameters.AddWithValue("@MCYouTubeURL", youtubeurl);
 				cmd.Parameters.AddWithValue("@MCTitle", title);
 				cmd.Parameters.AddWithValue("@PName", pname);
-				cmd.Parameters.AddWithValue("@MCDepartment", department);
+				//cmd.Parameters.AddWithValue("@MCDepartment", department);
 				cmd.Parameters.AddWithValue("@MCRestrictPW", restrictpw);
 				cmd.Parameters.AddWithValue("@MCCreatedDate", createdtime);
 				cmd.Parameters.AddWithValue("@MCOrgStatus", orgstatus);
@@ -106,16 +86,63 @@ namespace person2
 				int result = cmd.ExecuteNonQuery();
 				if (result == 1)
 				{
-					Response.Redirect("MediaUpload.aspx");
-				}
+                    try
+                    {
+
+                        //using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
+                        {
+
+                            conn.Open();
+                            //string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
+                            //SqlCommand cmd = new SqlCommand(sqlStatement, conn);
+                            cmd.Parameters.AddWithValue("@PRoleType", 2);
+                            Random rnd = new Random(DateTime.Now.Second);
+                            
+                            using (SqlDataReader rd = cmd.ExecuteReader())
+                            {
+                                while (rd.Read())
+                                {
+                                    int pId = (int)rd["PID"];
+                                    Judger jarger = new Judger();
+                                    jarger.pid = pId;
+                                    jarger.seq = rnd.Next();
+                                    judgerList.Add(jarger);
+                                }
+                            }
+                            judgerList.Sort();
+                            int i = 0;
+                            foreach (Judger jarger in judgerList)
+                            {
+                                if (jarger == null)
+                                    break;
+                                if (i > 2)
+                                    break;
+                               // cmd.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
+                               // cmd.Parameters.Clear();
+                                //cmd.Parameters.AddWithValue("@MCID", )
+                                // 將jarger的pid寫入到此影片的評審欄位
+                                i++;
+                            }
+                        }
+                        //this.lblshow.Text = "資料連線成功";
+
+                    }
+                    catch (Exception)
+                    {
+                        //this.lblshow.Text = "資料連線錯誤";
+                    }
+                    Response.Write("<script>alert('影片上傳成功!,前往首頁'); location.href='Default.aspx'; </script>");
+                    //Response.Redirect("MediaUpload.aspx");
+                }
 			}
 		}
 
-		protected void radtxtYouTubeURL_TextChanged1(object sender, EventArgs e)
-		{
-
-		}
-
-        
+        protected void btnClean_Click1(object sender, EventArgs e)
+        {
+            radtxtYouTubeURL.Text = "";
+            txtTitle.Text = "";
+            txtRestrictPW.Text = " ";
+            ddlOrgStatus.Text = " ";
+        }
     }
 }

@@ -31,13 +31,22 @@ namespace person2 {
         protected global::Telerik.Web.UI.RadMediaPlayer RadMediaPlayer1;
         
         /// <summary>
-        /// btn1 控制項。
+        /// SqlDataSource1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// lbMedia 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lbMedia;
         
         /// <summary>
         /// Panel2 控制項。
@@ -49,111 +58,84 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Panel Panel2;
         
         /// <summary>
-        /// RadMediaPlayer2 控制項。
+        /// lblbatch 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::Telerik.Web.UI.RadMediaPlayer RadMediaPlayer2;
+        protected global::System.Web.UI.WebControls.Label lblbatch;
         
         /// <summary>
-        /// btn2 控制項。
+        /// lblmcid 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn2;
+        protected global::System.Web.UI.WebControls.Label lblmcid;
         
         /// <summary>
-        /// Panel3 控制項。
+        /// txtpid 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
+        protected global::System.Web.UI.WebControls.TextBox txtpid;
         
         /// <summary>
-        /// lbl1 控制項。
+        /// lbldsendtime 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
+        protected global::System.Web.UI.WebControls.Label lbldsendtime;
         
         /// <summary>
-        /// lbl2 控制項。
+        /// txtreview 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
+        protected global::System.Web.UI.WebControls.TextBox txtreview;
         
         /// <summary>
-        /// txt1 控制項。
+        /// ddlresult 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlresult;
         
         /// <summary>
-        /// ddl1 控制項。
+        /// lblURL 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl1;
+        protected global::System.Web.UI.WebControls.Label lblURL;
         
         /// <summary>
-        /// txt2 控制項。
+        /// lblrecievetime 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt2;
+        protected global::System.Web.UI.WebControls.Label lblrecievetime;
         
         /// <summary>
-        /// ddl2 控制項。
+        /// btncorrect 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl2;
-        
-        /// <summary>
-        /// lbl3 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl3;
-        
-        /// <summary>
-        /// lbl4 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl4;
-        
-        /// <summary>
-        /// btn3 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn3;
+        protected global::System.Web.UI.WebControls.Button btncorrect;
     }
 }

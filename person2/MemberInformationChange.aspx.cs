@@ -33,7 +33,8 @@ namespace person2
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Write("<script>alert('登入失敗,前往登入'); location.href='Login.aspx'; </script>");
+                //Response.Redirect("login.aspx");
                 //txtName.Text = "失敗";
             }
 
@@ -46,10 +47,10 @@ namespace person2
             string stremail = txtEmail.Text;
             string strpassword = txtPassword.Text;
             string strcountry = ddlCountry.SelectedValue;
+
             string year = ddlYear.SelectedValue;
             string month = ddlMonth.SelectedValue;
             string day = ddlDay.SelectedValue;
-
             DateTime strbirthday = DateTime.Parse(year + "/" + month + "/" + day);
 
 
@@ -57,7 +58,8 @@ namespace person2
             {
                 if (Session["PID"] == null)
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Write("<script>alert('登入失敗，前往登入!'); location.href='Login.aspx'; </script>");
+                    //Response.Redirect("Login.aspx");
                 }
                 string pid = Session["PID"].ToString();  //判斷登入為何者
                 SqlCommand cmd = new SqlCommand();
@@ -75,7 +77,9 @@ namespace person2
                 int result = cmd.ExecuteNonQuery();
                 if (result == 1)
                 {
-                    Response.Write("修改成功");
+
+                    Response.Write("<script>alert('修改成功'); </script>");
+                    //Response.Write("修改成功");
                     //Response.Redirect("Default.aspx");
                 }
             }

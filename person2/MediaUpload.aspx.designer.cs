@@ -94,13 +94,13 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// ddlDepartment 控制項。
+        /// lblDepartment 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDepartment;
+        protected global::System.Web.UI.WebControls.Label lblDepartment;
         
         /// <summary>
         /// Label4 控制項。
@@ -139,21 +139,21 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.TextBox txtRestrictPW;
         
         /// <summary>
-        /// Button1 控制項。
+        /// btnMediaUpload 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnMediaUpload;
         
         /// <summary>
-        /// Button2 控制項。
+        /// btnClean 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnClean;
     }
 }

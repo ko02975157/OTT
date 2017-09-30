@@ -5,10 +5,9 @@
         .auto-style5 {
             height: 252px;
         }
-        .auto-style6 {
-            top: 17px;
-            left: 3px;
-        }
+        .auto-style7 {
+        height: 35px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -35,46 +34,7 @@
 &nbsp;</p>
     <p>
         <asp:Label ID="Label2" runat="server" Text="系名稱 :"></asp:Label>
-        <asp:DropDownList ID="ddlDepartment" runat="server" >
-            <asp:ListItem>企業管理學系</asp:ListItem>
-            <asp:ListItem>會計學系</asp:ListItem>
-            <asp:ListItem>財務金融學系國際金融管理組</asp:ListItem>
-            <asp:ListItem>財務金融學系財務金融組</asp:ListItem>
-            <asp:ListItem>風險管理與保險學系</asp:ListItem>
-            <asp:ListItem>國際企業學系國際企業經營組</asp:ListItem>
-            <asp:ListItem>國際企業學系外貿行銷管理組</asp:ListItem>
-            <asp:ListItem>新媒體暨傳播管理學系</asp:ListItem>
-            <asp:ListItem>廣播電視學系</asp:ListItem>
-            <asp:ListItem>廣告暨策略行銷學系</asp:ListItem>
-            <asp:ListItem>新聞學系</asp:ListItem>
-            <asp:ListItem>法律學系</asp:ListItem>
-            <asp:ListItem>財金法律學系</asp:ListItem>
-            <asp:ListItem>應用統計資訊學系</asp:ListItem>
-            <asp:ListItem>經濟學系</asp:ListItem>
-            <asp:ListItem>應用中國文學系</asp:ListItem>
-            <asp:ListItem>應用英語學系</asp:ListItem>
-            <asp:ListItem>應用日語學系</asp:ListItem>
-            <asp:ListItem>華語文教學學系</asp:ListItem>
-            <asp:ListItem>商業設計學系</asp:ListItem>
-            <asp:ListItem>商品設計學系</asp:ListItem>
-            <asp:ListItem>數位媒體設計學系</asp:ListItem>
-            <asp:ListItem>建築學系</asp:ListItem>
-            <asp:ListItem>都市規劃與防災學系</asp:ListItem>
-            <asp:ListItem>觀光事業學系</asp:ListItem>
-            <asp:ListItem>休閒遊憩管理學系</asp:ListItem>
-            <asp:ListItem>餐旅管理學系</asp:ListItem>
-            <asp:ListItem>犯罪防治系</asp:ListItem>
-            <asp:ListItem>公共事務學系</asp:ListItem>
-            <asp:ListItem>諮商與工商心理學系</asp:ListItem>
-            <asp:ListItem>資訊管理學系</asp:ListItem>
-            <asp:ListItem>資訊傳播工程學系</asp:ListItem>
-            <asp:ListItem>資訊工程學系</asp:ListItem>
-            <asp:ListItem>電子工程學系</asp:ListItem>
-            <asp:ListItem>電腦與通訊工程學系</asp:ListItem>
-            <asp:ListItem>醫療資訊與管理學系</asp:ListItem>
-            <asp:ListItem>生物科技學系</asp:ListItem>
-            <asp:ListItem>生物醫學工程學系</asp:ListItem>
-        </asp:DropDownList>
+        <asp:Label ID="lblDepartment" runat="server" Text="lblDepartment"></asp:Label>
     </p>
     <p>
         <asp:Label ID="Label4" runat="server" Text="媒體申請時狀態 :"></asp:Label>
@@ -88,10 +48,10 @@
         <asp:Label ID="Label3" runat="server" Text="限閱時須輸入的密碼 :"></asp:Label>
         <asp:TextBox ID="txtRestrictPW" runat="server"></asp:TextBox>
     </p>
-    <p style="height: 35px">
-        <asp:Button ID="Button1" runat="server" Height="30px" OnClick="Button1_Click1" Text="確定上傳" Width="80px" />
+    <p class="auto-style7">
+        <asp:Button ID="btnMediaUpload" runat="server" Height="30px" OnClick="btnMediaUpload_Click1" Text="上傳影片" Width="80px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="清除" Height="30px" Width="80px" />
+        <asp:Button ID="btnClean" runat="server" Text="清除" Height="30px" Width="80px" OnClick="btnClean_Click1" />
     </p>
 </div>
 </p>
