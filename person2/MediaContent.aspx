@@ -6,7 +6,7 @@
             z-index: 1;
             position: absolute;
             height: 98px;
-            right: 251px;
+            right: 250px;
             top: 508px;
         }
         </style>
