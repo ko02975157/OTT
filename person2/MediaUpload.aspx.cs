@@ -17,7 +17,7 @@ namespace person2
 			if (Session["PID"] != null)
 			{
 				  lblName.Text= Session["PName"].ToString();
-                lblDepartment.Text = Session["PDepartment"].ToString();
+                  lblDepartment.Text = Session["PDepartment"].ToString();
                     
 
 			}
