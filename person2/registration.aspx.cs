@@ -43,22 +43,37 @@ namespace person2
             string strcountry = ddlCountry.SelectedValue;
             int country = 1; //預設國家為臺灣
             int.TryParse(strcountry, out country);
+
             string education = ddlEducation.Text;
             string region = ddlRegion.Text;
 
-            string strcareer = ddlCareer.SelectedValue;
-            int career = 1; //預設職業為學生
-            int.TryParse(strcareer, out career);
+            string strtitle = ddlPtitle.SelectedValue;
+            int title = 1; //預設職稱為學生
+            int.TryParse(strtitle, out title);
+
+            string strdepartment = ddlPDepartment.SelectedValue;
+            int department = 1;//預設系為資管系
+            int.TryParse(strdepartment, out department);
+
+            string strcollege = ddlPCollege.SelectedValue;
+            int college = 1;//預設院為資訊學院
+            int.TryParse(strcollege,out college);
+
+
 
             string year = ddlYear.SelectedValue;
             string month = ddlMonth.SelectedValue;
             string day = ddlDay.SelectedValue;
             DateTime birthday = DateTime.Parse(year + "/" + month + "/" + day);
 
+
+
+        
+
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
             {  
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Insert Into Person (PName, PCode, PRoleType, PCreatedOn,PEmail,PUserName,PPassword,PSex,PCountry,PBirthDate,PEducation,PRegion,PCareer,PSuper) VALUES (@PName, @PCode,@PRoleType,@PCreatedOn,@PEmail,@PUserName,@PPassword,@PSex,@PCountry,@PBirthDate,@PEducation,@PRegion,@PCareer, 1)";
+                cmd.CommandText = "Insert Into Person (PName, PCode, PRoleType, PCreatedOn,PEmail,PUserName,PPassword,PSex,PCountry,PBirthDate,PEducation,PRegion,PSuper,PTitle,PDepartment,PCollege) VALUES (@PName, @PCode,@PRoleType,@PCreatedOn,@PEmail,@PUserName,@PPassword,@PSex,@PCountry,@PBirthDate,@PEducation,@PRegion,1,@PTitle,@PDepartment,@PCollege)";
                 cmd.Connection = conn;
                 cmd.Parameters.AddWithValue("@PName", name);
                 cmd.Parameters.AddWithValue("@PCode", code);
@@ -72,7 +87,9 @@ namespace person2
                 cmd.Parameters.AddWithValue("@PBirthDate", birthday);
                 cmd.Parameters.AddWithValue("@PEducation", education);
                 cmd.Parameters.AddWithValue("@PRegion", region);
-                cmd.Parameters.AddWithValue("@PCareer", career);
+                cmd.Parameters.AddWithValue("@PTitle", title);
+                cmd.Parameters.AddWithValue("@PDepartment", department);
+                cmd.Parameters.AddWithValue("@PCollege",college );
 
                 conn.Open();
                 int result = cmd.ExecuteNonQuery();

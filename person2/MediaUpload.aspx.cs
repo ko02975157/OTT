@@ -17,6 +17,8 @@ namespace person2
 			if (Session["PID"] != null)
 			{
 				  lblName.Text= Session["PName"].ToString();
+                lblDepartment.Text = Session["PDepartment"].ToString();
+                    
 
 			}
 			else
@@ -62,8 +64,7 @@ namespace person2
 		{
 			string youtubeurl = radtxtYouTubeURL.Text;
 			string title = txtTitle.Text;
-			string pname = lblName.Text;
-			string department = ddlDepartment.SelectedValue;
+            string pname = lblName.Text;
 			string orgstatus = ddlOrgStatus.SelectedValue;
 			string restrictpw = txtRestrictPW.Text;
 			DateTime createdtime = DateTime.Now;
@@ -77,7 +78,7 @@ namespace person2
 				cmd.Parameters.AddWithValue("@MCYouTubeURL", youtubeurl);
 				cmd.Parameters.AddWithValue("@MCTitle", title);
 				cmd.Parameters.AddWithValue("@PName", pname);
-				cmd.Parameters.AddWithValue("@MCDepartment", department);
+				//cmd.Parameters.AddWithValue("@MCDepartment", department);
 				cmd.Parameters.AddWithValue("@MCRestrictPW", restrictpw);
 				cmd.Parameters.AddWithValue("@MCCreatedDate", createdtime);
 				cmd.Parameters.AddWithValue("@MCOrgStatus", orgstatus);
@@ -88,12 +89,12 @@ namespace person2
                     try
                     {
 
-                        using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
+                        //using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
                         {
 
                             conn.Open();
-                            string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
-                            SqlCommand cmd = new SqlCommand(sqlStatement, conn);
+                            //string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
+                            //SqlCommand cmd = new SqlCommand(sqlStatement, conn);
                             cmd.Parameters.AddWithValue("@PRoleType", 2);
                             Random rnd = new Random(DateTime.Now.Second);
                             
@@ -116,9 +117,9 @@ namespace person2
                                     break;
                                 if (i > 2)
                                     break;
-                                cmd.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
-                                cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@MCID", )
+                               // cmd.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
+                               // cmd.Parameters.Clear();
+                                //cmd.Parameters.AddWithValue("@MCID", )
                                 // 將jarger的pid寫入到此影片的評審欄位
                                 i++;
                             }
@@ -140,7 +141,6 @@ namespace person2
         {
             radtxtYouTubeURL.Text = "";
             txtTitle.Text = "";
-            ddlDepartment.Text = "";
             txtRestrictPW.Text = " ";
             ddlOrgStatus.Text = " ";
         }
