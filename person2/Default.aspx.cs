@@ -18,5 +18,15 @@ namespace person2
         {
             Response.Redirect("Logout.aspx");
         }
-    }
+
+		protected void Button3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		protected void Button1_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

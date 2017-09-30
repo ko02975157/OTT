@@ -210,7 +210,6 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\scrolling-nav.js" />
-    <Content Include="MediaShow.aspx" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
     <Content Include="ReviewAll.aspx" />
@@ -304,13 +303,6 @@
     </Compile>
     <Compile Include="MediaContent.aspx.designer.cs">
       <DependentUpon>MediaContent.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MediaShow.aspx.cs">
-      <DependentUpon>MediaShow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MediaShow.aspx.designer.cs">
-      <DependentUpon>MediaShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="MediaUpload.aspx.cs">
       <DependentUpon>MediaUpload.aspx</DependentUpon>
