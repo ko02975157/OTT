@@ -121,31 +121,31 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Panel Panel3;
         
         /// <summary>
-        /// txtPID4 控制項。
+        /// txtPID0 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPID4;
+        protected global::System.Web.UI.WebControls.TextBox txtPID0;
         
         /// <summary>
-        /// txtreview4 控制項。
+        /// txtreview0 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtreview4;
+        protected global::System.Web.UI.WebControls.TextBox txtreview0;
         
         /// <summary>
-        /// ddlresult4 控制項。
+        /// ddlresult0 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlresult4;
+        protected global::System.Web.UI.WebControls.DropDownList ddlresult0;
         
         /// <summary>
         /// txtPID1 控制項。

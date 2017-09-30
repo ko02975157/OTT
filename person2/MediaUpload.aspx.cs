@@ -117,9 +117,9 @@ namespace person2
                                     break;
                                 if (i > 2)
                                     break;
-                                cmd2.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
-                                cmd2.Parameters.Clear();
-                                cmd2.Parameters.AddWithValue("@MCID", )
+                                //cmd2.CommandText = "Insert INTO ReviewAssignmentTB (MCID, PID, AssignTime) VALUES (@MCID, @PID, @AssignTime)";
+                                //cmd2.Parameters.Clear();
+                                //cmd2.Parameters.AddWithValue("@MCID", )
                                 //將jarger的pid寫入到此影片的評審欄位
                                 i++;
                             }

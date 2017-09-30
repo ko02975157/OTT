@@ -3,29 +3,24 @@
     <style type="text/css">
 
 
-
         .auto-style2 {
-            width: 32%;
-        }
-        .auto-style4 {
-            width: 309px;
-            height: 24px;
-        }
-        .auto-style11 {
-            width: 448px;
-            height: 24px;
+            width: 39%;
         }
         .auto-style23 {
-            width: 309px;
+            width: 459px;
             height: 30px;
         }
         .auto-style12 {
             width: 448px;
             height: 30px;
         }
-        .auto-style22 {
-            width: 222px;
-            height: 30px;
+        .auto-style4 {
+            width: 459px;
+            height: 24px;
+        }
+        .auto-style11 {
+            width: 448px;
+            height: 24px;
         }
         .auto-style13 {
             width: 100%;
@@ -42,17 +37,16 @@
         .auto-style20 {
             width: 191px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel1" runat="server" Height="386px">
+    <asp:Panel ID="Panel1" runat="server" Height="341px">
         <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server">
         </telerik:RadMediaPlayer>
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString2 %>" SelectCommand="SELECT [MCTitle], [MCYouTubeURL], [MCCreatedDate] FROM [MediaUpload]"></asp:SqlDataSource>
     </asp:Panel>
-    <br />
-    <asp:Panel ID="Panel2" runat="server" Height="272px">
+    <asp:Panel ID="Panel2" runat="server" Height="270px">
         <table class="auto-style2">
             <tr>
                 <td class="auto-style4">院長代號</td>
@@ -89,36 +83,35 @@
             </tr>
         </table>
         <br />
-        <br />
         <asp:Button ID="btncorrect" runat="server" Text="確認" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnreturn" runat="server" Text="退回重審" />
     </asp:Panel>
-    <br />
-    <asp:Panel ID="Panel3" runat="server" Height="340px">
+    <asp:Panel ID="Panel3" runat="server" Height="319px">
         <table class="auto-style2">
             <tr>
                 <td class="auto-style4">系主任代號</td>
                 <td class="auto-style11">
-                    <asp:TextBox ID="txtPID4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPID0" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style22">審核意見</td>
+                <td class="auto-style23">審核意見</td>
                 <td class="auto-style12">
-                    <asp:TextBox ID="txtreview4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtreview0" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style22">審核結果</td>
+                <td class="auto-style23">審核結果</td>
                 <td class="auto-style12">
-                    <asp:DropDownList ID="ddlresult4" runat="server">
+                    <asp:DropDownList ID="ddlresult0" runat="server">
                         <asp:ListItem>1.通過</asp:ListItem>
                         <asp:ListItem>2.不通過</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
         </table>
+        <br />
         <br />
         <br />
         <table class="auto-style13">

@@ -211,14 +211,13 @@
     <Content Include="js\scrolling-nav.js" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
-    <Content Include="re.aspx" />
     <Content Include="ReviewAll.aspx" />
     <Content Include="ReviewDetail.aspx" />
+    <Content Include="ReviewWait.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="ReviewMain.aspx" />
-    <Content Include="ReviewWait.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -318,13 +317,6 @@
     <Compile Include="PSuperChange.aspx.designer.cs">
       <DependentUpon>PSuperChange.aspx</DependentUpon>
     </Compile>
-    <Compile Include="re.aspx.cs">
-      <DependentUpon>re.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="re.aspx.designer.cs">
-      <DependentUpon>re.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ReviewAll.aspx.cs">
       <DependentUpon>ReviewAll.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,6 +330,13 @@
     </Compile>
     <Compile Include="ReviewDetail.aspx.designer.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.designer.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberInformationChange.aspx.cs">
       <DependentUpon>MemberInformationChange.aspx</DependentUpon>
@@ -367,13 +366,6 @@
     </Compile>
     <Compile Include="ReviewMain.aspx.designer.cs">
       <DependentUpon>ReviewMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ReviewWait.aspx.cs">
-      <DependentUpon>ReviewWait.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReviewWait.aspx.designer.cs">
-      <DependentUpon>ReviewWait.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -436,7 +428,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False" />
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
