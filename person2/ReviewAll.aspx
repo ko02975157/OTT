@@ -1,14 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReviewAll.aspx.cs" Inherits="person2.Reviewall" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReviewAll.aspx.cs" Inherits="person2.ReviewAll" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <style type="text/css">
 
 
+
         .auto-style2 {
             width: 32%;
-        }
-        .auto-style12 {
-            width: 448px;
-            height: 30px;
         }
         .auto-style4 {
             width: 309px;
@@ -20,6 +17,10 @@
         }
         .auto-style23 {
             width: 309px;
+            height: 30px;
+        }
+        .auto-style12 {
+            width: 448px;
             height: 30px;
         }
         .auto-style22 {
