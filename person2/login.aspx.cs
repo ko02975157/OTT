@@ -29,9 +29,12 @@ namespace person2
             string pEmail = "";
             string pPassword = "";
             string pCountry = "";
-             string pTitle = "";
-             string pDepartment = "";
-             string pCollege = "";
+            //string pTitle = "";
+            //string pDepartment = "";
+            // string pCollege = "";
+            int pTitle = 1;
+            int  pDepartment = 1;
+             int pCollege = 1;
             try
             {
                 using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["OTTConnectionString"].ConnectionString))
@@ -69,9 +72,26 @@ namespace person2
                             pCountry = rd["PCountry"].ToString();
                             string strPBirthDate = rd["PBirthDate"].ToString();
                             DateTime birthday = DateTime.Parse(strPBirthDate);
-                            pTitle = rd["PTitle"].ToString();
-                            pDepartment = rd["PDepartmnet"].ToString();
-                            pCollege = rd["PCollege"].ToString();
+
+                          string  strpTitle = rd["PTitle"].ToString();
+                            if (int.TryParse(strpTitle, out pTitle) == false)
+                            {
+                                Response.Write("<script>alert('PTitle!有問題') </script>");
+                                return;
+                            }
+                            string strpDepartment = rd["PDepartment"].ToString();
+                            if (int.TryParse(strpDepartment, out pDepartment) == false)
+                            {
+                                Response.Write("<script>alert('PDepartment!有問題') </script>");
+                                return;
+                            }
+
+                            string strpCollege = rd["PCollege"].ToString();
+                            if (int.TryParse(strpCollege, out pCollege) == false)
+                            {
+                                Response.Write("<script>alert('PCollege!有問題') </script>");
+                                return;
+                            }
 
                             Response.Write("<script>alert('登入成功!'); location.href='Default.aspx'; </script>");
                             
@@ -85,9 +105,9 @@ namespace person2
                             Session["PPassword"] = pPassword;
                             Session["PCountry"] = pCountry;
                             Session["PBirthDate"] = birthday;
-                            Session["PTitle"] = pTitle;
-                            Session["PDepartmnet"] = pDepartment;
-                            Session["PCollege"] = pCollege;
+                          //Session["PTitle"] = pTitle;
+                           // Session["PDepartmnet"] = pDepartment;
+                            //Session["PCollege"] = pCollege;
                             // Server.TransferRequest("MemberInformationChange.aspx"); 無法session
                             //Response.Redirect("Default.aspx");   //可以session
                         }

@@ -93,7 +93,7 @@ namespace person2
                         {
 
                             conn.Open();
-                            string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType";
+                            string sqlStatement = "Select PID From Person Where PRoleType= @PRoleType ";
                             SqlCommand cmd2 = new SqlCommand(sqlStatement, conn);
                             cmd2.Parameters.AddWithValue("@PRoleType", 2);
                             Random rnd = new Random(DateTime.Now.Second);
