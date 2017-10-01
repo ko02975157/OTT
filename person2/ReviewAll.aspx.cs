@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace person2
 {
-    public partial class ReviewDetail : System.Web.UI.Page
+    public partial class ReviewAll : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,9 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReviewMain.aspx.cs" Inherits="person2.ReviewMain" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReviewAll.aspx.cs" Inherits="person2.ReviewAll" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <style type="text/css">
 
+
         .auto-style2 {
             width: 39%;
+        }
+        .auto-style23 {
+            width: 459px;
+            height: 30px;
         }
         .auto-style12 {
             width: 448px;
@@ -32,87 +37,83 @@
         .auto-style20 {
             width: 191px;
         }
-        .auto-style23 {
-            width: 459px;
-            height: 30px;
-        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel1" runat="server" Height="400px">
-    <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server">
-    </telerik:RadMediaPlayer>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Panel ID="Panel1" runat="server" Height="341px">
+        <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server">
+        </telerik:RadMediaPlayer>
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OTTConnectionString2 %>" SelectCommand="SELECT [MCTitle], [MCYouTubeURL], [MCCreatedDate] FROM [MediaUpload]"></asp:SqlDataSource>
+    </asp:Panel>
+    <asp:Panel ID="Panel2" runat="server" Height="270px">
+        <table class="auto-style2">
+            <tr>
+                <td class="auto-style4">院長代號</td>
+                <td class="auto-style11">
+                    <asp:TextBox ID="txtPID" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">送至時間</td>
+                <td class="auto-style12">
+                    <asp:Label ID="lblreceivetime" runat="server" Text="Label"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">審核意見</td>
+                <td class="auto-style12">
+                    <asp:TextBox ID="txtreview" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">最終審核結果</td>
+                <td class="auto-style12">
+                    <asp:DropDownList ID="ddlresult" runat="server">
+                        <asp:ListItem>1.通過</asp:ListItem>
+                        <asp:ListItem>2.不通過</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">送出時間</td>
+                <td class="auto-style12">
+                    <asp:Label ID="lblsendtime" runat="server" Text="Label"></asp:Label>
+                </td>
+            </tr>
+        </table>
         <br />
-</asp:Panel>
-<asp:Panel ID="Panel2" runat="server" Height="386px">
-    <table class="auto-style2">
-        <tr>
-            <td class="auto-style23">批次代號</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblbatch" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">影音代號</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblmcid" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">批次名稱</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblbatchname" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">成立時間</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblcreattime" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">系主任代號</td>
-            <td class="auto-style11">
-                <asp:TextBox ID="txtPID" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">送至時間</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblreceivetime" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">審核意見</td>
-            <td class="auto-style12">
-                <asp:TextBox ID="txtreview" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">審核結果</td>
-            <td class="auto-style12">
-                <asp:DropDownList ID="ddlresult" runat="server">
-                    <asp:ListItem>1.通過</asp:ListItem>
-                    <asp:ListItem>2.不通過</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style23">送出時間</td>
-            <td class="auto-style12">
-                <asp:Label ID="lblsendtime" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-    </table>
-    <br />
-    <asp:Button ID="btnsent" runat="server" Text="送出" />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="btnreturn" runat="server" Text="退回重審" />
-</asp:Panel>
-    <asp:Panel ID="Panel3" runat="server" Height="151px">
+        <asp:Button ID="btncorrect" runat="server" Text="確認" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnreturn" runat="server" Text="退回重審" />
+    </asp:Panel>
+    <asp:Panel ID="Panel3" runat="server" Height="319px">
+        <table class="auto-style2">
+            <tr>
+                <td class="auto-style4">系主任代號</td>
+                <td class="auto-style11">
+                    <asp:TextBox ID="txtPID0" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">審核意見</td>
+                <td class="auto-style12">
+                    <asp:TextBox ID="txtreview0" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style23">審核結果</td>
+                <td class="auto-style12">
+                    <asp:DropDownList ID="ddlresult0" runat="server">
+                        <asp:ListItem>1.通過</asp:ListItem>
+                        <asp:ListItem>2.不通過</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
         <table class="auto-style13">
             <tr>
                 <td class="auto-style14">初審人員代號</td>

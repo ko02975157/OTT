@@ -24,7 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -161,7 +161,6 @@
     <Content Include="css\skel-noscript.css" />
     <Content Include="css\style-1000px.css" />
     <Content Include="css\style-desktop.css" />
-    <Content Include="css\style-login.css" />
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
@@ -212,7 +211,9 @@
     <Content Include="js\scrolling-nav.js" />
     <Content Include="MediaUpload.aspx" />
     <Content Include="PSuperChange.aspx" />
+    <Content Include="ReviewAll.aspx" />
     <Content Include="ReviewDetail.aspx" />
+    <Content Include="ReviewWait.aspx" />
     <Content Include="MemberInformationChange.aspx" />
     <Content Include="PersonRecord.aspx" />
     <Content Include="registration.aspx" />
@@ -316,12 +317,26 @@
     <Compile Include="PSuperChange.aspx.designer.cs">
       <DependentUpon>PSuperChange.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReviewAll.aspx.cs">
+      <DependentUpon>ReviewAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewAll.aspx.designer.cs">
+      <DependentUpon>ReviewAll.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReviewDetail.aspx.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReviewDetail.aspx.designer.cs">
       <DependentUpon>ReviewDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewWait.aspx.designer.cs">
+      <DependentUpon>ReviewWait.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberInformationChange.aspx.cs">
       <DependentUpon>MemberInformationChange.aspx</DependentUpon>

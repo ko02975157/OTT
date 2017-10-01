@@ -10,7 +10,7 @@
 namespace person2 {
     
     
-    public partial class reviewdetail {
+    public partial class ReviewDetail {
         
         /// <summary>
         /// Panel1 控制項。
@@ -40,15 +40,6 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// lbMedia 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbMedia;
-        
-        /// <summary>
         /// Panel2 控制項。
         /// </summary>
         /// <remarks>
@@ -76,22 +67,31 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.Label lblmcid;
         
         /// <summary>
-        /// txtpid 控制項。
+        /// lblbatchname 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpid;
+        protected global::System.Web.UI.WebControls.Label lblbatchname;
         
         /// <summary>
-        /// lbldsendtime 控制項。
+        /// txtPID 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbldsendtime;
+        protected global::System.Web.UI.WebControls.TextBox txtPID;
+        
+        /// <summary>
+        /// lblreceivetime 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblreceivetime;
         
         /// <summary>
         /// txtreview 控制項。
@@ -112,30 +112,21 @@ namespace person2 {
         protected global::System.Web.UI.WebControls.DropDownList ddlresult;
         
         /// <summary>
-        /// lblURL 控制項。
+        /// lblsendtime 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblURL;
+        protected global::System.Web.UI.WebControls.Label lblsendtime;
         
         /// <summary>
-        /// lblrecievetime 控制項。
+        /// btnsent 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblrecievetime;
-        
-        /// <summary>
-        /// btncorrect 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncorrect;
+        protected global::System.Web.UI.WebControls.Button btnsent;
     }
 }

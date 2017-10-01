@@ -16,7 +16,8 @@
     <p>
         &nbsp;</p>
     <p>
-<div  class="auto-style5">
+<div  lass="auto-style5">
+   
      <p>    
     <asp:Label ID="Label6" runat="server" Text="YouTubeURL :"></asp:Label>
 &nbsp;<telerik:RadTextBox ID="radtxtYouTubeURL" Runat="server" >
